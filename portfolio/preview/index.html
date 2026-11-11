@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="م. محمد الصواف — مهندس شبكات وأمن معلومات — معاينة الواجهة الأمامية فقط">
+    <title>م. محمد الصواف | مهندس شبكات وأمن معلومات (معاينة)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-aos="off">
+<script>document.documentElement.classList.add('js');</script>
+<noscript><style>.preloader{display:none;}</style></noscript>
+
+<div class="preloader" id="preloader">
+    <div class="preloader-spinner"><span></span><span></span><span></span></div>
+</div>
+
+<div style="background:linear-gradient(135deg,#0ea5e9,#6366f1);color:#fff;text-align:center;font-family:Tajawal,sans-serif;font-size:13px;padding:8px 12px;direction:rtl;">
+    معاينة الواجهة الأمامية فقط — بدون قاعدة بيانات. النسخة الكاملة تُفتح عبر: http://localhost/portfolio/app.php
+</div>
+
+<header class="navbar" id="navbar">
+    <div class="container nav-inner">
+        <a href="#home" class="brand">
+            <span class="brand-mark"><i class="fa-solid fa-shield-halved"></i></span>
+            <span class="brand-text">م. محمد الصواف</span>
+        </a>
+        <nav class="nav-menu" id="navMenu">
+            <a href="#home" class="nav-link active" data-id="home">الرئيسية</a>
+            <a href="#about" class="nav-link" data-id="about">من أنا</a>
+            <a href="#portfolio" class="nav-link" data-id="portfolio">أعمالي</a>
+            <a href="#services" class="nav-link" data-id="services">الخدمات</a>
+            <a href="#contact" class="nav-link" data-id="contact">تواصل معي</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="#" class="btn btn-ghost btn-sm"><i class="fa-solid fa-right-to-bracket"></i> تسجيل الدخول</a>
+            <button class="nav-toggle" id="navToggle" aria-label="القائمة"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home" data-aos="fade-up">
+    <div class="hero-bg" aria-hidden="true">
+        <div class="hero-grid-overlay"></div>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    <div class="container hero-inner">
+        <div class="hero-content">
+            <span class="hero-badge"><i class="fa-solid fa-code"></i> متاح لاستقبال المشاريع</span>
+            <h1 class="hero-title">
+                أهلاً، أنا
+                <span class="gradient-text">م. محمد الصواف</span>
+            </h1>
+            <div class="hero-type">
+                <span class="hero-type-label">أعمل كـ</span>
+                <span class="typer" id="typer" data-words='["مهندس شبكات","خبير أمن سيبراني","مطور ويب","مستشار تقني"]'></span><span class="typer-caret"></span>
+            </div>
+            <p class="hero-desc">أساعد الشركات والأفراد على بناء بنية تقنية آمنة، سريعة، وقابلة للتوسع — من تصميم المواقع إلى تحصين الشبكات.</p>
+            <div class="hero-actions">
+                <a href="#portfolio" class="btn btn-primary"><i class="fa-solid fa-briefcase"></i> تصفح أعمالي</a>
+                <a href="#contact" class="btn btn-ghost"><i class="fa-solid fa-paper-plane"></i> تواصل معي</a>
+            </div>
+            <div class="hero-tech">
+                <span>PHP</span><span>MySQL</span><span>JavaScript</span><span>Linux</span><span>CCNA</span><span>CEH</span>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-card" id="codeCard">
+                <div class="code-card-head">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    <span class="code-card-title">network-audit.php</span>
+                </div>
+                <div class="code-card-body">
+                    <pre><code><span class="c-kw">function</span> <span class="c-fn">secureNetwork</span>(<span class="c-var">$network</span>) {
+    <span class="c-kw">foreach</span> (<span class="c-var">$network</span> <span class="c-kw">as</span> <span class="c-var">$device</span>) {
+        <span class="c-fn">applyFirewall</span>(<span class="c-var">$device</span>);
+        <span class="c-fn">enableEncryption</span>(<span class="c-var">$device</span>);
+        <span class="c-fn">runPenTest</span>(<span class="c-var">$device</span>);
+    }
+    <span class="c-kw">return</span> <span class="c-str">'Network SECURED ✓'</span>;
+}</code></pre>
+                </div>
+                <div class="code-card-status"><span class="pulse-dot"></span> Status: <span class="c-ok">All Systems Protected</span></div>
+            </div>
+            <div class="hero-orbit">
+                <span class="orbit-ring r1"></span><span class="orbit-ring r2"></span>
+                <div class="orbit-core"><i class="fa-solid fa-shield-halved"></i></div>
+            </div>
+            <div class="float-chip chip-1"><i class="fa-solid fa-lock"></i> AES-256</div>
+            <div class="float-chip chip-2"><i class="fa-solid fa-network-wired"></i> 99.9% Uptime</div>
+            <div class="float-chip chip-3"><i class="fa-solid fa-bug-slash"></i> Zero Critical</div>
+        </div>
+    </div>
+    <div class="hero-scroll"><a href="#about"><span></span></a></div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats-band" id="statsBand">
+    <div class="container stats-grid">
+        <div class="stat-item" data-aos="zoom-in">
+            <span class="stat-value"><span class="counter" data-target="7">0</span><span class="stat-suffix">+</span></span>
+            <span class="stat-label">سنوات خبرة</span>
+        </div>
+        <div class="stat-item" data-aos="zoom-in">
+            <span class="stat-value"><span class="counter" data-target="120">0</span><span class="stat-suffix">+</span></span>
+            <span class="stat-label">مشروع منفّذ</span>
+        </div>
+        <div class="stat-item" data-aos="zoom-in">
+            <span class="stat-value"><span class="counter" data-target="85">0</span><span class="stat-suffix">+</span></span>
+            <span class="stat-label">عميل سعيد</span>
+        </div>
+        <div class="stat-item" data-aos="zoom-in">
+            <span class="stat-value"><span class="counter" data-target="10">0</span><span class="stat-suffix">+</span></span>
+            <span class="stat-label">شهادة احترافية</span>
+        </div>
+    </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section about" id="about">
+    <div class="container">
+        <div class="section-head" data-aos="fade-down">
+            <span class="section-tag">من أنا</span>
+            <h2 class="section-title">أجمع بين <span class="gradient-text">الهندسة</span> و<span class="gradient-text">الأمن</span> في كل مشروع</h2>
+            <p class="section-sub">تعرّف على مسيرتي المهنية وخبراتي التقنية</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-visual" data-aos="fade-left">
+                <div class="about-frame">
+                    <div class="about-card-main">
+                        <div class="about-avatar"><i class="fa-solid fa-user-shield"></i></div>
+                        <h3>م. محمد الصواف</h3>
+                        <p>مهندس شبكات وأمن معلومات</p>
+                        <a href="#contact" class="btn btn-primary btn-sm">تواصل معي <i class="fa-solid fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                <div class="about-badge-exp">
+                    <span class="exp-num">3+</span>
+                    <span class="exp-label">سنوات<br>خبرة</span>
+                </div>
+            </div>
+            <div class="about-content" data-aos="fade-right">
+                <p class="about-text">أنا م. محمد الصواف، مهندس شبكات وأمن معلومات بخبرة تتجاوز 3 سنوات في تصميم وإدارة البنى التحتية للشبكات، وبناء الحلول البرمجية الآمنة. أعمل على دمج هندسة الشبكات مع تطوير البرمجيات لتقديم حلول متكاملة تبدأ من التخطيط وتنتهي بالحماية.</p>
+                <p class="about-text">أؤمن أن الأمان ليس خطوة إضافية، بل أساس أي نظام. لذلك أركز على بناء أنظمة آمنة بالتصميم (Security by Design)، مع الالتزام بأفضل الممارسات العالمية في التشفير وحماية البيانات.</p>
+                <div class="about-tags">
+                    <span><i class="fa-solid fa-check"></i> عقد صيانة ودعم</span>
+                    <span><i class="fa-solid fa-check"></i> تسليم بالوقت</span>
+                    <span><i class="fa-solid fa-check"></i> تقرير أمني شفاف</span>
+                </div>
+                <h4 class="skills-title">مهاراتي التقنية</h4>
+                <div class="skills">
+                    <div class="skill" data-aos="fade-right">
+                        <div class="skill-head"><span>إدارة وتصميم الشبكات</span><span class="skill-pct" data-level="95">0%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-level="95"></div></div>
+                    </div>
+                    <div class="skill" data-aos="fade-right">
+                        <div class="skill-head"><span>أمن المعلومات ومكافحة الاختراق</span><span class="skill-pct" data-level="90">0%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-level="90"></div></div>
+                    </div>
+                    <div class="skill" data-aos="fade-right">
+                        <div class="skill-head"><span>الجدران النارية و VPN</span><span class="skill-pct" data-level="88">0%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-level="88"></div></div>
+                    </div>
+                    <div class="skill" data-aos="fade-right">
+                        <div class="skill-head"><span>تطوير الويب (PHP / JS)</span><span class="skill-pct" data-level="85">0%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-level="85"></div></div>
+                    </div>
+                    <div class="skill" data-aos="fade-right">
+                        <div class="skill-head"><span>قواعد البيانات (MySQL)</span><span class="skill-pct" data-level="82">0%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-level="82"></div></div>
+                    </div>
+                    <div class="skill" data-aos="fade-right">
+                        <div class="skill-head"><span>أمان تطبيقات الويب</span><span class="skill-pct" data-level="92">0%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-level="92"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ PORTFOLIO ============ -->
+<section class="section portfolio" id="portfolio">
+    <div class="container">
+        <div class="section-head" data-aos="fade-down">
+            <span class="section-tag">معرض الأعمال</span>
+            <h2 class="section-title">مشاريع <span class="gradient-text">نفّذتها</span> باحترافية</h2>
+            <p class="section-sub">استعرض أعمالي في تطوير الويب والشبكات والأمن السيبراني</p>
+        </div>
+        <div class="portfolio-toolbar" data-aos="fade-up">
+            <div class="filter-buttons" id="filterButtons">
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="websites"><i class="fa-solid fa-globe"></i> مواقع ويب</button>
+                <button class="filter-btn" data-filter="mobile-apps"><i class="fa-solid fa-mobile-screen"></i> تطبيقات جوال</button>
+                <button class="filter-btn" data-filter="network-tools"><i class="fa-solid fa-network-wired"></i> أدوات شبكات</button>
+                <button class="filter-btn" data-filter="security-tools"><i class="fa-solid fa-shield-halved"></i> أدوات أمن وسايبر</button>
+            </div>
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="projectSearch" placeholder="ابحث عن مشروع...">
+            </div>
+        </div>
+        <div class="projects-grid" id="projectsGrid">
+
+            <article class="project-card" data-aos="zoom-in"
+                     data-category="websites" data-title="منصة تعليم إلكتروني ذكية"
+                     data-description="منصة تعليمية متكاملة بمسارات تدريبية ذكية، اختبارات تفاعلية، وشهادات إكمال، بنظام إدارة محتوى مرن وواجهة عربية أنيقة."
+                     data-image="../assets/img/projects/e-learning.svg" data-link="https://example.com/e-learning"
+                     data-category-name="مواقع ويب">
+                <div class="project-thumb">
+                    <img src="../assets/img/projects/e-learning.svg" alt="منصة تعليم إلكتروني ذكية" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-cat-badge"><i class="fa-solid fa-globe"></i> مواقع ويب</span>
+                        <div class="project-actions">
+                            <button class="btn-icon project-view" title="عرض التفاصيل"><i class="fa-solid fa-eye"></i></button>
+                            <a href="https://example.com/e-learning" target="_blank" rel="noopener" class="btn-icon" title="زيارة المشروع"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <span class="project-featured"><i class="fa-solid fa-star"></i> مميز</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">منصة تعليم إلكتروني ذكية</h3>
+                    <p class="project-desc">منصة تعليمية متكاملة بمسارات تدريبية ذكية، اختبارات تفاعلية، وشهادات إكمال، بنظام إدارة محتوى مرن وواجهة عربية أنيقة.</p>
+                    <span class="project-tech">مواقع ويب</span>
+                </div>
+            </article>
+
+            <article class="project-card" data-aos="zoom-in"
+                     data-category="network-tools" data-title="سكربت فحص شبكي متقدم (Network Scanner)"
+                     data-description="أداة فحص شبكي متقدمة تكتشف الأجهزة والمنافذ المفتوحة وتُقيّم جاهزية البنية التحتية مع تقارير واضحة بالعربية."
+                     data-image="../assets/img/projects/network-scanner.svg" data-link="https://github.com/example/network-scanner"
+                     data-category-name="أدوات شبكات">
+                <div class="project-thumb">
+                    <img src="../assets/img/projects/network-scanner.svg" alt="سكربت فحص شبكي متقدم" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-cat-badge"><i class="fa-solid fa-network-wired"></i> أدوات شبكات</span>
+                        <div class="project-actions">
+                            <button class="btn-icon project-view" title="عرض التفاصيل"><i class="fa-solid fa-eye"></i></button>
+                            <a href="https://github.com/example/network-scanner" target="_blank" rel="noopener" class="btn-icon" title="زيارة المشروع"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <span class="project-featured"><i class="fa-solid fa-star"></i> مميز</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">سكربت فحص شبكي متقدم (Network Scanner)</h3>
+                    <p class="project-desc">أداة فحص شبكي متقدمة تكتشف الأجهزة والمنافذ المفتوحة وتُقيّم جاهزية البنية التحتية مع تقارير واضحة بالعربية.</p>
+                    <span class="project-tech">أدوات شبكات</span>
+                </div>
+            </article>
+
+            <article class="project-card" data-aos="zoom-in"
+                     data-category="security-tools" data-title="أداة فحص ثغرات الويب"
+                     data-description="أداة فحص ثغرات تطبيقات الويب تكتشف حقن SQL وXSS وتكوينات الخوادم الخاطئة، مع تقرير مخاطر مرتّب بالأولوية."
+                     data-image="../assets/img/projects/security-scanner.svg" data-link="https://github.com/example/security-scanner"
+                     data-category-name="أدوات أمن وسايبر">
+                <div class="project-thumb">
+                    <img src="../assets/img/projects/security-scanner.svg" alt="أداة فحص ثغرات الويب" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-cat-badge"><i class="fa-solid fa-shield-halved"></i> أدوات أمن وسايبر</span>
+                        <div class="project-actions">
+                            <button class="btn-icon project-view" title="عرض التفاصيل"><i class="fa-solid fa-eye"></i></button>
+                            <a href="https://github.com/example/security-scanner" target="_blank" rel="noopener" class="btn-icon" title="زيارة المشروع"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <span class="project-featured"><i class="fa-solid fa-star"></i> مميز</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">أداة فحص ثغرات الويب</h3>
+                    <p class="project-desc">أداة فحص ثغرات تطبيقات الويب تكتشف حقن SQL وXSS وتكوينات الخوادم الخاطئة، مع تقرير مخاطر مرتّب بالأولوية.</p>
+                    <span class="project-tech">أدوات أمن وسايبر</span>
+                </div>
+            </article>
+
+            <article class="project-card" data-aos="zoom-in"
+                     data-category="mobile-apps" data-title="نظام حضور ذكي بالتعرف على الوجه"
+                     data-description="نظام تتبع حضور الموظفين بالتعرف على الوجه مع تقارير يومية وتنبيهات فورية وواجهة استخدام سهلة."
+                     data-image="../assets/img/projects/attendance-app.svg" data-link="https://example.com/attendance"
+                     data-category-name="تطبيقات جوال">
+                <div class="project-thumb">
+                    <img src="../assets/img/projects/attendance-app.svg" alt="نظام حضور ذكي بالتعرف على الوجه" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-cat-badge"><i class="fa-solid fa-mobile-screen"></i> تطبيقات جوال</span>
+                        <div class="project-actions">
+                            <button class="btn-icon project-view" title="عرض التفاصيل"><i class="fa-solid fa-eye"></i></button>
+                            <a href="https://example.com/attendance" target="_blank" rel="noopener" class="btn-icon" title="زيارة المشروع"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">نظام حضور ذكي بالتعرف على الوجه</h3>
+                    <p class="project-desc">نظام تتبع حضور الموظفين بالتعرف على الوجه مع تقارير يومية وتنبيهات فورية وواجهة استخدام سهلة.</p>
+                    <span class="project-tech">تطبيقات جوال</span>
+                </div>
+            </article>
+
+            <article class="project-card" data-aos="zoom-in"
+                     data-category="websites" data-title="متجر إلكتروني متكامل"
+                     data-description="متجر شامل مع سلة مشتريات، بوابات دفع محلية، لوحة تحكم للمنتجات والطلبات، وتحسينات SEO كاملة."
+                     data-image="../assets/img/projects/store.svg" data-link="https://example.com/store"
+                     data-category-name="مواقع ويب">
+                <div class="project-thumb">
+                    <img src="../assets/img/projects/store.svg" alt="متجر إلكتروني متكامل" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-cat-badge"><i class="fa-solid fa-globe"></i> مواقع ويب</span>
+                        <div class="project-actions">
+                            <button class="btn-icon project-view" title="عرض التفاصيل"><i class="fa-solid fa-eye"></i></button>
+                            <a href="https://example.com/store" target="_blank" rel="noopener" class="btn-icon" title="زيارة المشروع"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">متجر إلكتروني متكامل</h3>
+                    <p class="project-desc">متجر شامل مع سلة مشتريات، بوابات دفع محلية، لوحة تحكم للمنتجات والطلبات، وتحسينات SEO كاملة.</p>
+                    <span class="project-tech">مواقع ويب</span>
+                </div>
+            </article>
+
+            <article class="project-card" data-aos="zoom-in"
+                     data-category="network-tools" data-title="لوحة مراقبة الخوادم والبنية التحتية"
+                     data-description="لوحة مراقبة حية للخوادم ترسل تنبيهات عند ارتفاع الحمل أو التوقف، مع رسوم بيانية وتقارير أداء دورية."
+                     data-image="../assets/img/projects/server-monitor.svg" data-link="https://example.com/monitor"
+                     data-category-name="أدوات شبكات">
+                <div class="project-thumb">
+                    <img src="../assets/img/projects/server-monitor.svg" alt="لوحة مراقبة الخوادم والبنية التحتية" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-cat-badge"><i class="fa-solid fa-network-wired"></i> أدوات شبكات</span>
+                        <div class="project-actions">
+                            <button class="btn-icon project-view" title="عرض التفاصيل"><i class="fa-solid fa-eye"></i></button>
+                            <a href="https://example.com/monitor" target="_blank" rel="noopener" class="btn-icon" title="زيارة المشروع"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">لوحة مراقبة الخوادم والبنية التحتية</h3>
+                    <p class="project-desc">لوحة مراقبة حية للخوادم ترسل تنبيهات عند ارتفاع الحمل أو التوقف، مع رسوم بيانية وتقارير أداء دورية.</p>
+                    <span class="project-tech">أدوات شبكات</span>
+                </div>
+            </article>
+
+            <article class="project-card" data-aos="zoom-in"
+                     data-category="mobile-apps" data-title="تطبيق مراسلة مشفّرة من طرف إلى طرف"
+                     data-description="تطبيق مراسلة فورية بتشفير كامل من طرف إلى طرف، رسائل تختفي، وروابط تحقق، بمعايير أمان عالية."
+                     data-image="../assets/img/projects/secure-chat.svg" data-link="https://github.com/example/secure-chat"
+                     data-category-name="تطبيقات جوال">
+                <div class="project-thumb">
+                    <img src="../assets/img/projects/secure-chat.svg" alt="تطبيق مراسلة مشفّرة" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-cat-badge"><i class="fa-solid fa-mobile-screen"></i> تطبيقات جوال</span>
+                        <div class="project-actions">
+                            <button class="btn-icon project-view" title="عرض التفاصيل"><i class="fa-solid fa-eye"></i></button>
+                            <a href="https://github.com/example/secure-chat" target="_blank" rel="noopener" class="btn-icon" title="زيارة المشروع"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">تطبيق مراسلة مشفّرة من طرف إلى طرف</h3>
+                    <p class="project-desc">تطبيق مراسلة فورية بتشفير كامل من طرف إلى طرف، رسائل تختفي، وروابط تحقق، بمعايير أمان عالية.</p>
+                    <span class="project-tech">تطبيقات جوال</span>
+                </div>
+            </article>
+
+            <article class="project-card" data-aos="zoom-in"
+                     data-category="websites" data-title="نظام إدارة مخزون للمستودعات"
+                     data-description="نظام إدارة مخزون يعرض الكميات والموردين، باركود، وتنبيهات نفاد، مع تقارير مبيعات ومشتريات دقيقة."
+                     data-image="../assets/img/projects/inventory.svg" data-link="https://example.com/inventory"
+                     data-category-name="مواقع ويب">
+                <div class="project-thumb">
+                    <img src="../assets/img/projects/inventory.svg" alt="نظام إدارة مخزون للمستودعات" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-cat-badge"><i class="fa-solid fa-globe"></i> مواقع ويب</span>
+                        <div class="project-actions">
+                            <button class="btn-icon project-view" title="عرض التفاصيل"><i class="fa-solid fa-eye"></i></button>
+                            <a href="https://example.com/inventory" target="_blank" rel="noopener" class="btn-icon" title="زيارة المشروع"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">نظام إدارة مخزون للمستودعات</h3>
+                    <p class="project-desc">نظام إدارة مخزون يعرض الكميات والموردين، باركود، وتنبيهات نفاد، مع تقارير مبيعات ومشتريات دقيقة.</p>
+                    <span class="project-tech">مواقع ويب</span>
+                </div>
+            </article>
+
+        </div>
+        <p class="empty-state" id="projectsEmpty" hidden><i class="fa-solid fa-folder-open"></i> لا توجد نتائج مطابقة للبحث</p>
+    </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section services" id="services">
+    <div class="container">
+        <div class="section-head" data-aos="fade-down">
+            <span class="section-tag">الخدمات والمنتجات</span>
+            <h2 class="section-title">حلول و<span class="gradient-text">خدمات رقمية</span> عند الطلب</h2>
+            <p class="section-sub">اختر الخدمة المناسبة واحصل على عرض سعر خلال 24 ساعة</p>
+        </div>
+        <div class="services-grid">
+
+            <article class="service-card service-featured" data-aos="fade-up">
+                <span class="service-popular">الأكثر طلباً</span>
+                <div class="service-icon"><i class="fa-solid fa-network-wired"></i></div>
+                <span class="service-badge badge-available">متوفر</span>
+                <h3 class="service-title">تهيئة شبكات الشركات (VPN / Firewall)</h3>
+                <p class="service-desc">تصميم وتهيئة الشبكات الداخلية، جدران الحماية، شبكات VPN الآمنة، وفصل الشبكات حسب الأقسام.</p>
+                <div class="service-price">
+                    <span class="price-num">$800</span>
+                    <span class="price-note">تبدأ من</span>
+                </div>
+                <a href="#contact" class="btn btn-outline btn-block order-btn" data-service="تهيئة شبكات الشركات (VPN / Firewall)"><i class="fa-solid fa-cart-plus"></i> اطلب الخدمة</a>
+            </article>
+
+            <article class="service-card service-featured" data-aos="fade-up">
+                <span class="service-popular">الأكثر طلباً</span>
+                <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <span class="service-badge badge-available">متوفر</span>
+                <h3 class="service-title">اختبار اختراق وتقييم الثغرات</h3>
+                <p class="service-desc">فحص شامل لأنظمتك وتطبيقاتك لاكتشاف الثغرات قبل اختراقها، مع تقرير تفصيلي ومراحل إصلاح موثقة.</p>
+                <div class="service-price">
+                    <span class="price-num">$1200</span>
+                    <span class="price-note">تبدأ من</span>
+                </div>
+                <a href="#contact" class="btn btn-outline btn-block order-btn" data-service="اختبار اختراق وتقييم الثغرات"><i class="fa-solid fa-cart-plus"></i> اطلب الخدمة</a>
+            </article>
+
+            <article class="service-card" data-aos="fade-up">
+                <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+                <span class="service-badge badge-available">متوفر</span>
+                <h3 class="service-title">تصميم مواقع ومدونات احترافية</h3>
+                <p class="service-desc">تصميم وتطوير مواقع متجاوبة وسريعة ومتوافقة مع محركات البحث، بهوية بصرية مميزة.</p>
+                <div class="service-price">
+                    <span class="price-num">$150</span>
+                    <span class="price-note">تبدأ من</span>
+                </div>
+                <a href="#contact" class="btn btn-outline btn-block order-btn" data-service="تصميم مواقع ومدونات احترافية"><i class="fa-solid fa-cart-plus"></i> اطلب الخدمة</a>
+            </article>
+
+            <article class="service-card" data-aos="fade-up">
+                <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                <span class="service-badge badge-limited">كمية محدودة</span>
+                <h3 class="service-title">متجر إلكتروني متكامل</h3>
+                <p class="service-desc">متجر شامل مع بوابات دفع، إدارة مخزون، وأنظمة شحن وتوصيل.</p>
+                <div class="service-price">
+                    <span class="price-num">$500</span>
+                    <span class="price-note">تبدأ من</span>
+                </div>
+                <a href="#contact" class="btn btn-outline btn-block order-btn" data-service="متجر إلكتروني متكامل"><i class="fa-solid fa-cart-plus"></i> اطلب الخدمة</a>
+            </article>
+
+            <article class="service-card" data-aos="fade-up">
+                <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                <span class="service-badge badge-limited">كمية محدودة</span>
+                <h3 class="service-title">فحص أمني وتدقيق أنظمة</h3>
+                <p class="service-desc">مراجعة أمنية كاملة للبنية التحتية وأنظمة التشغيل والتطبيقات وفق أفضل المعايير العالمية.</p>
+                <div class="service-price">
+                    <span class="price-num price-request">عند الطلب</span>
+                </div>
+                <a href="#contact" class="btn btn-outline btn-block order-btn" data-service="فحص أمني وتدقيق أنظمة"><i class="fa-solid fa-cart-plus"></i> اطلب الخدمة</a>
+            </article>
+
+            <article class="service-card" data-aos="fade-up">
+                <div class="service-icon"><i class="fa-solid fa-server"></i></div>
+                <span class="service-badge badge-available">متوفر</span>
+                <h3 class="service-title">صيانة وحماية الخوادم</h3>
+                <p class="service-desc">مراقبة دورية، تحديثات أمنية مستمرة، نسخ احتياطي تلقائي، واستعادة فورية عند الأعطال.</p>
+                <div class="service-price">
+                    <span class="price-num">$250</span>
+                    <span class="price-note">شهرياً</span>
+                </div>
+                <a href="#contact" class="btn btn-outline btn-block order-btn" data-service="صيانة وحماية الخوادم"><i class="fa-solid fa-cart-plus"></i> اطلب الخدمة</a>
+            </article>
+
+            <article class="service-card" data-aos="fade-up">
+                <div class="service-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                <span class="service-badge badge-unavailable">غير متاح</span>
+                <h3 class="service-title">تطبيقات جوال مخصصة</h3>
+                <p class="service-desc">تطوير تطبيقات موبايل لأنظمة iOS وAndroid بأداء عالٍ وتجربة مستخدم مميزة.</p>
+                <div class="service-price">
+                    <span class="price-num">$700</span>
+                    <span class="price-note">تبدأ من</span>
+                </div>
+                <a href="#contact" class="btn btn-outline btn-block order-btn" data-service="تطبيقات جوال مخصصة"><i class="fa-solid fa-cart-plus"></i> اطلب الخدمة</a>
+            </article>
+
+            <article class="service-card" data-aos="fade-up">
+                <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+                <span class="service-badge badge-available">متوفر</span>
+                <h3 class="service-title">استشارات ودعم فني</h3>
+                <p class="service-desc">جلسات استشارية عن بعد في مجال الشبكات والأمن السيبراني وحلول البرمجيات.</p>
+                <div class="service-price">
+                    <span class="price-num">$100</span>
+                    <span class="price-note">بالساعة</span>
+                </div>
+                <a href="#contact" class="btn btn-outline btn-block order-btn" data-service="استشارات ودعم فني"><i class="fa-solid fa-cart-plus"></i> اطلب الخدمة</a>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section testimonials" id="testimonials">
+    <div class="container">
+        <div class="section-head" data-aos="fade-down">
+            <span class="section-tag">آراء العملاء</span>
+            <h2 class="section-title">ماذا يقول <span class="gradient-text">عملائي</span> عني؟</h2>
+        </div>
+        <div class="testimonials-grid">
+            <figure class="testimonial-card" data-aos="zoom-in">
+                <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <blockquote>"تعامل محترف وأمانة عالية في العمل. سكّب شبكتنا بالكامل مع جدار حماية متقدم بدون أي توقف للعمل."</blockquote>
+                <figcaption>
+                    <span class="testimonial-avatar"><i class="fa-solid fa-user-tie"></i></span>
+                    <div><strong>محمد العتيبي</strong><small>مدير تقنية المعلومات — شركة أفق</small></div>
+                </figcaption>
+            </figure>
+            <figure class="testimonial-card" data-aos="zoom-in">
+                <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <blockquote>"بنى لي المتجر من الصفر بسرعة وجودة عالية، والدعم الفني مستمر. أنصح فيه بشدة لأي مشروع تقني."</blockquote>
+                <figcaption>
+                    <span class="testimonial-avatar"><i class="fa-solid fa-businesswoman"></i></span>
+                    <div><strong>نورة القحطاني</strong><small>مؤسسة متجر إلكتروني</small></div>
+                </figcaption>
+            </figure>
+            <figure class="testimonial-card" data-aos="zoom-in">
+                <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <blockquote>"فحص أمني دقيق كشف ثغرات لم نكن نتوقعها، مع تقرير واضح وخطوات إصلاح عملية. خبرة حقيقية بالأمن."</blockquote>
+                <figcaption>
+                    <span class="testimonial-avatar"><i class="fa-solid fa-user-astronaut"></i></span>
+                    <div><strong>خالد الرشيد</strong><small>مطور برمجيات</small></div>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section contact" id="contact">
+    <div class="container">
+        <div class="section-head" data-aos="fade-down">
+            <span class="section-tag">تواصل معي</span>
+            <h2 class="section-title">لنبدأ <span class="gradient-text">مشروعك</span> اليوم</h2>
+            <p class="section-sub">أرسل لي رسالتك وسأرد خلال 24 ساعة</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info" data-aos="fade-left">
+                <div class="info-card">
+                    <span class="info-icon"><i class="fa-solid fa-envelope"></i></span>
+                    <div><h4>البريد الإلكتروني</h4><p dir="ltr">swaf8315@gmail.com</p></div>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon"><i class="fa-solid fa-phone"></i></span>
+                    <div><h4>الهاتف / واتساب</h4><p dir="ltr">+967 771792570</p></div>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <div><h4>الموقع</h4><p>الرياض، المملكة العربية السعودية</p></div>
+                </div>
+                <a href="https://wa.me/967771792570" target="_blank" rel="noopener" class="btn btn-whatsapp btn-block">
+                    <i class="fa-brands fa-whatsapp"></i> تواصل واتساب مباشرة
+                </a>
+            </div>
+            <form class="contact-form" id="contactForm" data-aos="fade-right" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cName">الاسم *</label>
+                        <input type="text" id="cName" name="name" class="form-control" placeholder="اسمك الكامل" required>
+                        <span class="field-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cEmail">البريد الإلكتروني *</label>
+                        <input type="email" id="cEmail" name="email" class="form-control" placeholder="name@example.com" required dir="ltr">
+                        <span class="field-error"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="cSubject">الموضوع *</label>
+                    <input type="text" id="cSubject" name="subject" class="form-control" placeholder="موضوع الرسالة" required>
+                    <span class="field-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="cMessage">الرسالة *</label>
+                    <textarea id="cMessage" name="message" class="form-control" rows="6" placeholder="اكتب تفاصيل مشروعك أو استفسارك هنا..." required></textarea>
+                    <span class="field-error"></span>
+                </div>
+                <div class="form-terms">
+                    <i class="fa-solid fa-lock"></i> رسالتك مشفرة وسيتم الرد عليها عبر البريد الإلكتروني بأمان.
+                </div>
+                <button type="submit" class="btn btn-primary btn-block submit-btn" id="contactSubmit">
+                    <span class="btn-label"><i class="fa-solid fa-paper-plane"></i> إرسال الرسالة</span>
+                    <span class="btn-loading" hidden><i class="fa-solid fa-spinner fa-spin"></i> جار الإرسال...</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer-grid">
+        <div class="footer-col">
+            <div class="brand footer-brand">
+                <span class="brand-mark"><i class="fa-solid fa-shield-halved"></i></span>
+                <span class="brand-text">م. محمد الصواف</span>
+            </div>
+            <p class="footer-desc">مهندس شبكات وأمن معلومات — أقدم حلولاً تقنية متكاملة تجمع بين هندسة الشبكات وأمن المعلومات وتطوير البرمجيات.</p>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-title">روابط سريعة</h4>
+            <ul class="footer-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">من أنا</a></li>
+                <li><a href="#portfolio">أعمالي</a></li>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#contact">تواصل معي</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-title">معلومات التواصل</h4>
+            <ul class="footer-contact">
+                <li><i class="fa-solid fa-envelope"></i><span dir="ltr">swaf8315@gmail.com</span></li>
+                <li><i class="fa-solid fa-phone"></i><span dir="ltr">+967 771792570</span></li>
+                <li><i class="fa-solid fa-location-dot"></i><span>الرياض، المملكة العربية السعودية</span></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-title">تابعني</h4>
+            <div class="footer-social">
+                <a href="https://github.com/khaledsalmi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/khaledsalmi" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                
+                <a href="https://wa.me/967771792570" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p>م. محمد الصواف © 2026 — جميع الحقوق محفوظة.</p>
+            <p class="footer-dev">صُنع بـ <i class="fa-solid fa-heart"></i> بواسطة <a href="#home">م. محمد الصواف</a></p>
+        </div>
+    </div>
+</footer>
+
+<div class="toast-container" id="toastContainer"></div>
+
+<a href="#home" class="back-to-top" id="backToTop" aria-label="العودة للأعلى"><i class="fa-solid fa-angles-up"></i></a>
+
+<div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-box">
+        <button class="modal-close" data-close aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-body" id="projectModalBody"></div>
+    </div>
+</div>
+
+<script>
+/* معاينة فقط: النموذج لا يوجد خلفه سيرفر — نعرض نجاحاً وهمياً */
+(function () {
+  var f = document.getElementById('contactForm');
+  if (!f) return;
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    if (window.showToast) window.showToast('نسخة المعاينة: لا يوجد سيرفر لإرسال الرسالة. جربها على النسخة الكاملة.', 'success');
+  });
+})();
+</script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

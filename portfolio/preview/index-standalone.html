@@ -1,0 +1,1987 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="م. محمد الصواف — مهندس شبكات وأمن معلومات — معاينة الواجهة الأمامية فقط">
+    <title>م. محمد الصواف | مهندس شبكات وأمن معلومات (معاينة)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+/* ============================================================
+   Personal Portfolio & Services Platform — Public Stylesheet
+   Light modern theme · RTL · cyan accent
+   ============================================================ */
+
+:root {
+  --bg: #f4f7fb;
+  --bg-soft: #eaf0f7;
+  --bg-card: #ffffff;
+  --bg-card-2: #f1f5f9;
+  --border: rgba(15, 23, 42, 0.1);
+  --border-strong: rgba(8, 145, 178, 0.35);
+  --text: #0f172a;
+  --text-dim: #475569;
+  --text-weak: #64748b;
+  --primary: #0891b2;
+  --primary-dark: #0e7490;
+  --secondary: #059669;
+  --danger: #dc2626;
+  --warning: #d97706;
+  --gradient: linear-gradient(135deg, #06b6d4 0%, #10b981 100%);
+  --gradient-text: linear-gradient(120deg, #0891b2 0%, #06b6d4 45%, #059669 100%);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 10px 40px rgba(15, 23, 42, 0.12);
+  --shadow-glow: 0 0 40px rgba(6, 182, 212, 0.15);
+  --font-main: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  --font-latin: "Space Grotesk", "Tajawal", sans-serif;
+  --nav-h: 76px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.75;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.no-scroll { overflow: hidden; }
+
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; cursor: pointer; }
+
+::selection { background: rgba(6, 182, 212, 0.22); }
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: var(--primary-dark); }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.gradient-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* ---------- Preloader ---------- */
+.preloader {
+  display: none;
+}
+html.js .preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  animation: preloaderAutoHide 0.5s ease 2.8s forwards;
+}
+@keyframes preloaderAutoHide {
+  to { opacity: 0; visibility: hidden; }
+}
+.preloader.hidden { opacity: 0; visibility: hidden; animation: none; }
+.preloader-spinner { display: flex; gap: 8px; }
+.preloader-spinner span {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--gradient);
+  animation: preload 1s ease-in-out infinite;
+}
+.preloader-spinner span:nth-child(2) { animation-delay: 0.15s; }
+.preloader-spinner span:nth-child(3) { animation-delay: 0.3s; }
+@keyframes preload {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(-14px); opacity: 1; }
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-family: var(--font-main);
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  cursor: pointer;
+}
+.btn:active { transform: scale(0.97); }
+.btn-primary {
+  background: var(--gradient);
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(6, 182, 212, 0.3);
+}
+.btn-primary:hover { box-shadow: 0 12px 34px rgba(6, 182, 212, 0.4); transform: translateY(-2px); }
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+}
+.btn-ghost:hover { border-color: var(--primary); background: rgba(6, 182, 212, 0.08); transform: translateY(-2px); }
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--border-strong);
+}
+.btn-outline:hover { background: var(--gradient); color: #ffffff; border-color: transparent; }
+.btn-whatsapp { background: #25d366; color: #ffffff; box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3); }
+.btn-whatsapp:hover { box-shadow: 0 12px 34px rgba(37, 211, 102, 0.4); transform: translateY(-2px); }
+.btn-block { width: 100%; }
+.btn-sm { padding: 10px 20px; font-size: 14px; }
+.btn-icon {
+  width: 42px; height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.72);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  transition: 0.25s;
+}
+.btn-icon:hover { background: var(--gradient); color: #ffffff; }
+
+/* ---------- Navbar ---------- */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid var(--border);
+  transition: 0.35s ease;
+}
+.navbar.scrolled {
+  background: #ffffff;
+  border-bottom-color: var(--border);
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: var(--nav-h); }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px; }
+.brand-mark {
+  width: 40px; height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: var(--gradient);
+  color: #ffffff;
+  font-size: 18px;
+  box-shadow: 0 6px 20px rgba(6, 182, 212, 0.35);
+}
+.nav-menu { display: flex; align-items: center; gap: 6px; }
+.nav-link {
+  position: relative;
+  padding: 9px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-dim);
+  border-radius: 10px;
+  transition: 0.25s;
+}
+.nav-link:hover { color: var(--text); background: rgba(15, 23, 42, 0.05); }
+.nav-link.active { color: var(--primary); font-weight: 700; }
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 4px; right: 16px; left: 16px;
+  height: 2px;
+  background: var(--gradient);
+  border-radius: 2px;
+}
+.nav-actions { display: flex; align-items: center; gap: 14px; }
+.nav-userchip {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(6, 182, 212, 0.08);
+  border: 1px solid rgba(6, 182, 212, 0.25);
+  border-radius: 100px; padding: 6px 14px;
+  font-size: 13px; font-weight: 700; color: var(--primary);
+  white-space: nowrap;
+}
+.nav-userchip i { font-size: 12px; color: var(--primary-dark); }
+.nav-cta { white-space: nowrap; padding: 10px 20px; }
+.nav-toggle {
+  display: none;
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--text);
+  font-size: 19px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: calc(var(--nav-h) + 60px) 0 80px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-bg { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+.hero-grid-overlay {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(6, 182, 212, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.07) 1px, transparent 1px);
+  background-size: 46px 46px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 30%, transparent 75%);
+          mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 30%, transparent 75%);
+}
+.blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.55; }
+.blob-1 { width: 460px; height: 460px; background: rgba(6, 182, 212, 0.22); top: -120px; right: -80px; animation: floaty 12s ease-in-out infinite; }
+.blob-2 { width: 380px; height: 380px; background: rgba(16, 185, 129, 0.18); bottom: -120px; left: -60px; animation: floaty 15s ease-in-out infinite reverse; }
+.blob-3 { width: 260px; height: 260px; background: rgba(99, 102, 241, 0.18); top: 40%; left: 40%; animation: floaty 18s ease-in-out infinite; }
+@keyframes floaty { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(24px,-24px) scale(1.06); } }
+
+.hero-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; }
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--secondary);
+  background: rgba(16, 185, 129, 0.09);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 100px;
+  margin-bottom: 22px;
+}
+.hero-badge i { animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+.hero-title { font-size: clamp(34px, 5vw, 56px); font-weight: 900; line-height: 1.25; margin-bottom: 16px; }
+.hero-type { font-size: clamp(20px, 2.4vw, 28px); font-weight: 700; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.hero-type-label { color: var(--text-dim); font-weight: 500; font-size: 0.85em; }
+.typer { color: var(--primary); font-family: var(--font-latin); letter-spacing: 0.5px; }
+.typer-caret { display: inline-block; width: 3px; height: 1.1em; background: var(--primary); margin-inline-start: 2px; animation: blink 0.85s step-end infinite; }
+@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+.hero-desc { color: var(--text-dim); font-size: 17px; max-width: 560px; margin-bottom: 30px; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 34px; }
+.hero-tech { display: flex; flex-wrap: wrap; gap: 10px; }
+.hero-tech span {
+  padding: 6px 14px;
+  font-size: 13px;
+  font-family: var(--font-latin);
+  font-weight: 600;
+  color: var(--text-dim);
+  background: rgba(15, 23, 42, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.hero-visual { position: relative; min-height: 460px; }
+.code-card {
+  position: relative;
+  z-index: 2;
+  background: #0f172a;
+  border: 1px solid rgba(6, 182, 212, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.28);
+  overflow: hidden;
+  transform: perspective(1000px) rotateY(-6deg) rotateX(3deg);
+  transition: transform 0.4s ease;
+}
+.code-card:hover { transform: perspective(1000px) rotateY(0deg) rotateX(0deg); }
+.code-card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: rgba(30, 41, 59, 0.85);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+.dot { width: 11px; height: 11px; border-radius: 50%; }
+.dot.red { background: #f87171; }
+.dot.yellow { background: #fbbf24; }
+.dot.green { background: #34d399; }
+.code-card-title { margin-inline-start: auto; color: #94a3b8; font-family: var(--font-latin); font-size: 12px; }
+.code-card-body { padding: 18px; overflow-x: auto; }
+.code-card-body pre { font-family: "Consolas", monospace; font-size: 13px; line-height: 1.7; direction: ltr; text-align: left; color: #cbd5e1; }
+.c-kw { color: #c084fc; }
+.c-fn { color: #fbbf24; }
+.c-var { color: #67e8f9; }
+.c-str { color: #86efac; }
+.code-card-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(52, 211, 153, 0.1);
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  font-size: 13px;
+  color: #cbd5e1;
+}
+.pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: #34d399; animation: pulse 1.6s infinite; }
+.c-ok { color: #34d399; font-family: var(--font-latin); font-weight: 600; }
+
+.hero-orbit {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 340px; height: 340px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.orbit-ring { position: absolute; border: 1px dashed rgba(6, 182, 212, 0.35); border-radius: 50%; inset: 0; animation: spin 24s linear infinite; }
+.orbit-ring.r2 { inset: 40px; border-color: rgba(16, 185, 129, 0.3); animation-duration: 18s; animation-direction: reverse; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.orbit-core {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 96px; height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--gradient);
+  color: #ffffff;
+  font-size: 38px;
+  box-shadow: 0 0 60px rgba(6, 182, 212, 0.45);
+}
+.float-chip {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #e6edf7;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.3);
+  animation: floaty 7s ease-in-out infinite;
+}
+.float-chip i { color: var(--primary); }
+.chip-1 { top: 6%; right: -6%; }
+.chip-2 { bottom: 22%; right: -14%; animation-delay: 1.2s; }
+.chip-3 { bottom: -2%; left: 8%; animation-delay: 2s; }
+
+.hero-scroll {
+  position: absolute;
+  bottom: 30px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+.hero-scroll a {
+  width: 42px; height: 66px;
+  display: block;
+  border: 2px solid var(--border-strong);
+  border-radius: 40px;
+  position: relative;
+}
+.hero-scroll span {
+  position: absolute;
+  top: 10px; left: 50%;
+  width: 6px; height: 6px;
+  margin-inline-start: -3px;
+  border-radius: 50%;
+  background: var(--primary);
+  animation: scrolldot 1.8s ease-in-out infinite;
+}
+@keyframes scrolldot {
+  0% { transform: translateY(0); opacity: 1; }
+  80% { transform: translateY(26px); opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* ---------- Stats band ---------- */
+.stats-band {
+  border-block: 1px solid var(--border);
+  background: var(--bg-soft);
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding-block: 44px;
+}
+.stat-item { text-align: center; }
+.stat-value { font-size: clamp(30px, 4vw, 44px); font-weight: 900; font-family: var(--font-latin); color: var(--text); }
+.stat-value .counter { background: var(--gradient-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.stat-suffix { color: var(--primary); margin-inline-start: 2px; }
+.stat-label { display: block; margin-top: 6px; color: var(--text-dim); font-size: 15px; font-weight: 500; }
+
+/* ---------- Section generic ---------- */
+.section { padding-block: 96px; position: relative; }
+.section-head { text-align: center; max-width: 680px; margin-inline: auto; margin-bottom: 56px; }
+.section-tag {
+  display: inline-block;
+  padding: 7px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary);
+  background: rgba(6, 182, 212, 0.08);
+  border: 1px solid var(--border-strong);
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+.section-title { font-size: clamp(26px, 3.4vw, 38px); font-weight: 900; margin-bottom: 12px; }
+.section-sub { color: var(--text-dim); font-size: 16px; }
+
+.portfolio { background: var(--bg-soft); }
+
+/* ---------- About ---------- */
+.about-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 60px; align-items: center; }
+.about-visual { position: relative; }
+.about-frame {
+  position: relative;
+  padding: 16px;
+  background: linear-gradient(160deg, rgba(6,182,212,0.14), rgba(16,185,129,0.08));
+  border-radius: 24px;
+  -webkit-mask: none;
+}
+.about-frame::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 26px;
+  padding: 2px;
+  background: linear-gradient(160deg, #06b6d4, transparent 50%, #10b981);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+.about-card-main {
+  background: var(--bg-card);
+  border-radius: 18px;
+  padding: 40px 28px;
+  text-align: center;
+}
+.about-avatar {
+  width: 110px; height: 110px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 46px;
+  color: #ffffff;
+  border-radius: 50%;
+  background: var(--gradient);
+  box-shadow: 0 0 40px rgba(6, 182, 212, 0.4);
+}
+.about-card-main h3 { font-size: 22px; font-weight: 800; margin-bottom: 4px; }
+.about-card-main p { color: var(--text-dim); margin-bottom: 20px; }
+.about-badge-exp {
+  position: absolute;
+  bottom: -22px; right: -14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+.exp-num { font-size: 30px; font-weight: 900; color: var(--primary); font-family: var(--font-latin); }
+.exp-label { color: var(--text-dim); font-size: 13px; font-weight: 700; line-height: 1.4; }
+.about-content .about-text { color: var(--text-dim); margin-bottom: 16px; }
+.about-tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 30px; }
+.about-tags span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--secondary);
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 100px;
+}
+.skills-title { font-size: 17px; font-weight: 800; margin-bottom: 18px; }
+.skills { display: grid; gap: 14px; }
+.skill-head { display: flex; justify-content: space-between; font-size: 14px; font-weight: 600; margin-bottom: 7px; }
+.skill-pct { color: var(--primary); font-family: var(--font-latin); }
+.skill-bar { height: 8px; border-radius: 8px; background: rgba(15, 23, 42, 0.1); overflow: hidden; }
+.skill-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 8px;
+  background: var(--gradient);
+  transition: width 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+}
+.skill-fill::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+  animation: shine 2.4s infinite;
+}
+@keyframes shine { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+
+/* ---------- Portfolio ---------- */
+.portfolio-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 36px; }
+.filter-buttons { display: flex; flex-wrap: wrap; gap: 10px; }
+.filter-btn {
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dim);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  transition: 0.25s;
+}
+.filter-btn:hover { color: var(--text); border-color: var(--border-strong); }
+.filter-btn.active {
+  background: var(--gradient);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 6px 18px rgba(6, 182, 212, 0.3);
+}
+.search-box { position: relative; min-width: 260px; }
+.search-box i { position: absolute; top: 50%; right: 14px; transform: translateY(-50%); color: var(--text-weak); }
+.search-box input {
+  width: 100%;
+  padding: 11px 20px 11px 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 14px;
+  transition: 0.25s;
+}
+.search-box input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.15); }
+
+.projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.3s ease, scale 0.3s ease;
+}
+.project-card:hover { transform: translateY(-8px); box-shadow: var(--shadow), var(--shadow-glow); border-color: var(--border-strong); }
+.project-card.hiding { opacity: 0; scale: 0.96; pointer-events: none; }
+.project-thumb { position: relative; aspect-ratio: 16/10; overflow: hidden; background: var(--bg-card-2); }
+.project-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.project-card:hover .project-thumb img { transform: scale(1.08); }
+.project-noimg { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 48px; color: var(--text-weak); }
+.project-overlay {
+  position: absolute; inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(2, 6, 23, 0.92), rgba(2, 6, 23, 0.1) 60%, transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.project-card:hover .project-overlay { opacity: 1; }
+.project-cat-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  background: rgba(7, 11, 20, 0.8);
+  border: 1px solid var(--border-strong);
+  border-radius: 100px;
+  color: var(--primary);
+}
+.project-actions { display: flex; gap: 8px; }
+.project-featured {
+  position: absolute;
+  top: 12px; left: 12px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  background: var(--gradient);
+  border-radius: 100px;
+  z-index: 2;
+}
+.project-info { padding: 18px 20px 22px; }
+.project-title { font-size: 17px; font-weight: 800; margin-bottom: 6px; }
+.project-desc { color: var(--text-dim); font-size: 14px; margin-bottom: 12px; }
+.project-desc-locked {
+  display: flex; align-items: center; gap: 6px;
+  color: #b45309; font-weight: 600;
+}
+.project-desc-locked i { color: #d97706; }
+.project-tech { font-size: 12px; font-weight: 700; color: var(--primary); background: rgba(6, 182, 212, 0.1); padding: 5px 12px; border-radius: 100px; display: inline-block; }
+
+.empty-state { text-align: center; color: var(--text-dim); font-size: 16px; padding: 40px 0; }
+.empty-state i { font-size: 34px; display: block; margin-bottom: 12px; color: var(--text-weak); }
+
+/* ---------- Services ---------- */
+.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.service-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.service-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); border-color: var(--border-strong); }
+.service-featured { border-color: var(--border-strong); box-shadow: var(--shadow-glow); }
+.service-popular {
+  position: absolute;
+  top: -13px; left: 20px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #ffffff;
+  background: var(--gradient);
+  border-radius: 100px;
+}
+.service-icon {
+  width: 58px; height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--primary);
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+.service-badge { align-self: flex-start; margin-bottom: 12px; padding: 5px 12px; font-size: 12px; font-weight: 700; border-radius: 100px; }
+.badge-available { color: #059669; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); }
+.badge-limited { color: #b45309; background: rgba(217, 119, 6, 0.12); border: 1px solid rgba(217, 119, 6, 0.3); }
+.badge-unavailable { color: #dc2626; background: rgba(220, 38, 38, 0.1); border: 1px solid rgba(220, 38, 38, 0.3); }
+.service-title { font-size: 17px; font-weight: 800; margin-bottom: 8px; }
+.service-desc { color: var(--text-dim); font-size: 14px; flex-grow: 1; margin-bottom: 18px; }
+.service-price { display: flex; align-items: baseline; gap: 8px; margin-bottom: 18px; }
+.price-num { font-size: 26px; font-weight: 900; font-family: var(--font-latin); color: var(--text); }
+.price-request { font-family: var(--font-main); color: var(--primary); }
+.price-note { color: var(--text-weak); font-size: 13px; }
+.order-btn { margin-top: auto; }
+
+/* ---------- Testimonials ---------- */
+.testimonials { background: var(--bg-soft); }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonial-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+.testimonial-stars { color: #f59e0b; font-size: 14px; margin-bottom: 14px; }
+.testimonial-card blockquote { color: var(--text-dim); font-size: 15px; margin-bottom: 20px; }
+.testimonial-card figcaption { display: flex; align-items: center; gap: 12px; }
+.testimonial-avatar {
+  width: 46px; height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--gradient);
+  color: #ffffff;
+  font-size: 18px;
+}
+.testimonial-card figcaption strong { display: block; font-size: 15px; }
+.testimonial-card figcaption small { color: var(--text-weak); }
+
+/* ---------- Contact ---------- */
+.contact-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 40px; }
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  margin-bottom: 16px;
+  transition: 0.3s;
+}
+.info-card:hover { border-color: var(--border-strong); transform: translateX(-4px); }
+.info-icon {
+  width: 50px; height: 50px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  color: var(--primary);
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid var(--border-strong);
+  border-radius: 13px;
+}
+.info-card h4 { font-size: 14px; color: var(--text-dim); font-weight: 600; }
+.info-card p { font-size: 15px; font-weight: 700; }
+.contact-form {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 30px;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px; color: var(--text-dim); }
+.form-control {
+  width: 100%;
+  padding: 13px 16px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 15px;
+  transition: 0.25s;
+}
+.form-control:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.15); background: var(--bg-card-2); }
+.form-control.input-error { border-color: var(--danger); box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.12); }
+.field-error { display: block; color: var(--danger); font-size: 13px; margin-top: 6px; min-height: 0; }
+.form-terms { display: flex; align-items: center; gap: 8px; color: var(--text-weak); font-size: 13px; margin-bottom: 18px; }
+.form-terms i { color: var(--secondary); }
+
+/* ---------- Footer ---------- */
+.footer { background: #eaf0f7; border-top: 1px solid var(--border); }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 0.8fr 1fr 0.8fr; gap: 36px; padding-block: 56px; }
+.footer-brand { margin-bottom: 14px; }
+.footer-desc { color: var(--text-dim); font-size: 14px; max-width: 260px; }
+.footer-title { font-size: 16px; font-weight: 800; margin-bottom: 18px; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { color: var(--text-dim); font-size: 14px; transition: 0.25s; }
+.footer-links a:hover { color: var(--primary); padding-inline-start: 4px; }
+.footer-contact li { display: flex; align-items: center; gap: 10px; color: var(--text-dim); font-size: 14px; margin-bottom: 12px; }
+.footer-contact i { color: var(--primary); width: 16px; }
+.footer-social { display: flex; gap: 10px; }
+.footer-social a {
+  width: 42px; height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  transition: 0.3s;
+}
+.footer-social a:hover { background: var(--gradient); color: #ffffff; border-color: transparent; transform: translateY(-3px); }
+.footer-bottom { border-top: 1px solid var(--border); padding-block: 20px; }
+.footer-bottom .container { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; color: var(--text-weak); font-size: 14px; }
+.footer-dev i { color: var(--danger); }
+.footer-dev a { color: var(--primary); }
+
+/* ---------- Back to top ---------- */
+.back-to-top {
+  position: fixed;
+  bottom: 26px; left: 26px;
+  width: 46px; height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--gradient);
+  color: #ffffff;
+  font-size: 16px;
+  box-shadow: 0 8px 24px rgba(6, 182, 212, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: 0.35s;
+  z-index: 900;
+}
+.back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+
+/* ---------- Toast ---------- */
+.toast-container {
+  position: fixed;
+  top: 96px; left: 24px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  font-size: 14px;
+  font-weight: 600;
+  animation: toastIn 0.35s ease;
+  max-width: 340px;
+}
+.toast i { font-size: 18px; }
+.toast-success i { color: var(--secondary); }
+.toast-error i { color: var(--danger); }
+@keyframes toastIn { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: none; } }
+
+/* ---------- Flash ---------- */
+.flash-container { position: fixed; top: 96px; right: 24px; z-index: 2001; display: flex; flex-direction: column; gap: 10px; }
+.flash {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 18px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  animation: toastIn 0.35s ease;
+}
+.flash-success { background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.35); color: #047857; }
+.flash-error { background: rgba(220, 38, 38, 0.1); border: 1px solid rgba(220, 38, 38, 0.35); color: #b91c1c; }
+.flash-close { background: none; border: none; color: inherit; font-size: 18px; margin-inline-start: auto; opacity: 0.7; }
+
+/* ---------- Modal ---------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.modal.open { opacity: 1; visibility: visible; }
+.modal-overlay { position: absolute; inset: 0; background: rgba(2, 6, 23, 0.55); }
+.modal-box {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  max-height: 88vh;
+  overflow-y: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  transform: translateY(24px) scale(0.97);
+  transition: 0.3s;
+}
+.modal.open .modal-box { transform: none; }
+.modal-close {
+  position: absolute;
+  top: 14px; left: 14px;
+  width: 38px; height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.07);
+  border: 1px solid var(--border);
+  color: var(--text);
+  z-index: 5;
+}
+.modal-close:hover { background: var(--danger); color: #fff; }
+.modal-body p { color: var(--text-dim); line-height: 1.9; }
+.modal-hero { position: relative; aspect-ratio: 16/8; overflow: hidden; border-radius: 20px 20px 0 0; }
+.modal-hero img { width: 100%; height: 100%; object-fit: cover; }
+.modal-hero .modal-noimg { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 56px; color: var(--text-weak); background: var(--bg-card-2); }
+.modal-content { padding: 28px; }
+.modal-title { font-size: 24px; font-weight: 900; margin-bottom: 10px; }
+.modal-cat { display: inline-flex; align-items: center; gap: 8px; color: var(--primary); font-size: 13px; font-weight: 700; padding: 6px 14px; background: rgba(6,182,212,0.1); border-radius: 100px; margin-bottom: 16px; }
+.modal-actions { display: flex; gap: 12px; margin-top: 22px; flex-wrap: wrap; }
+
+/* ---------- Reveal animations (only when JS is enabled) ---------- */
+html.js [data-aos] { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+html.js [data-aos="fade-left"] { transform: translateX(30px); }
+html.js [data-aos="fade-right"] { transform: translateX(-30px); }
+html.js [data-aos="fade-down"] { transform: translateY(-24px); }
+html.js [data-aos="zoom-in"] { transform: scale(0.9); }
+html.js [data-aos].aos-animate { opacity: 1; transform: none; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+  .hero-visual { min-height: 400px; max-width: 560px; margin-inline: auto; width: 100%; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+  .nav-cta, .nav-userchip { display: none; }
+  .nav-menu {
+    position: fixed;
+    top: var(--nav-h); left: 0; right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 18px;
+    background: #ffffff;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+    transform: translateY(-16px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+  }
+  .nav-menu.open { transform: none; opacity: 1; visibility: visible; }
+  .nav-link { padding: 13px 18px; text-align: center; }
+  .nav-link.active::after { right: 40%; left: 40%; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+  .about-grid { grid-template-columns: 1fr; gap: 50px; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .section { padding-block: 72px; }
+}
+
+@media (max-width: 560px) {
+  .projects-grid, .services-grid, .testimonials-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .portfolio-toolbar { flex-direction: column; align-items: stretch; }
+  .search-box { width: 100%; }
+  .filter-buttons { justify-content: center; }
+  .float-chip { display: none; }
+  .chip-3 { display: flex; }
+  .hero-scroll { display: none; }
+  .footer-bottom .container { justify-content: center; text-align: center; }
+}
+    </style>
+</head>
+<body data-aos="off">
+<script>document.documentElement.classList.add('js');</script>
+<noscript><style>.preloader{display:none;}</style></noscript>
+
+<div class="preloader" id="preloader">
+    <div class="preloader-spinner"><span></span><span></span><span></span></div>
+</div>
+
+<div style="background:linear-gradient(135deg,#0ea5e9,#6366f1);color:#fff;text-align:center;font-family:Tajawal,sans-serif;font-size:13px;padding:8px 12px;direction:rtl;">
+    معاينة الواجهة الأمامية فقط — بدون قاعدة بيانات. النسخة الكاملة تُفتح عبر: http://localhost/portfolio/app.php
+</div>
+
+<header class="navbar" id="navbar">
+    <div class="container nav-inner">
+        <a href="#home" class="brand">
+            <span class="brand-mark"><i class="fa-solid fa-shield-halved"></i></span>
+            <span class="brand-text">م. محمد الصواف</span>
+        </a>
+        <nav class="nav-menu" id="navMenu">
+            <a href="#home" class="nav-link active" data-id="home">الرئيسية</a>
+            <a href="#about" class="nav-link" data-id="about">من أنا</a>
+            <a href="#portfolio" class="nav-link" data-id="portfolio">أعمالي</a>
+            <a href="#services" class="nav-link" data-id="services">الخدمات</a>
+            <a href="#contact" class="nav-link" data-id="contact">تواصل معي</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="#" class="btn btn-ghost btn-sm"><i class="fa-solid fa-right-to-bracket"></i> تسجيل الدخول</a>
+            <button class="nav-toggle" id="navToggle" aria-label="القائمة"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home" data-aos="fade-up">
+    <div class="hero-bg" aria-hidden="true">
+        <div class="hero-grid-overlay"></div>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    <div class="container hero-inner">
+        <div class="hero-content">
+            <span class="hero-badge"><i class="fa-solid fa-code"></i> متاح لاستقبال المشاريع</span>
+            <h1 class="hero-title">
+                أهلاً، أنا
+                <span class="gradient-text">م. محمد الصواف</span>
+            </h1>
+            <div class="hero-type">
+                <span class="hero-type-label">أعمل كـ</span>
+                <span class="typer" id="typer" data-words='["مهندس شبكات","خبير أمن سيبراني","مطور ويب","مستشار تقني"]'></span><span class="typer-caret"></span>
+            </div>
+            <p class="hero-desc">أساعد الشركات والأفراد على بناء بنية تقنية آمنة، سريعة، وقابلة للتوسع — من تصميم المواقع إلى تحصين الشبكات.</p>
+            <div class="hero-actions">
+                <a href="#portfolio" class="btn btn-primary"><i class="fa-solid fa-briefcase"></i> تصفح أعمالي</a>
+                <a href="#contact" class="btn btn-ghost"><i class="fa-solid fa-paper-plane"></i> تواصل معي</a>
+            </div>
+            <div class="hero-tech">
+                <span>PHP</span><span>MySQL</span><span>JavaScript</span><span>Linux</span><span>CCNA</span><span>CEH</span>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-card" id="codeCard">
+                <div class="code-card-head">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    <span class="code-card-title">network-audit.php</span>
+                </div>
+                <div class="code-card-body">
+                    <pre><code><span class="c-kw">function</span> <span class="c-fn">secureNetwork</span>(<span class="c-var">$network</span>) {
+    <span class="c-kw">foreach</span> (<span class="c-var">$network</span> <span class="c-kw">as</span> <span class="c-var">$device</span>) {
+        <span class="c-fn">applyFirewall</span>(<span class="c-var">$device</span>);
+        <span class="c-fn">enableEncryption</span>(<span class="c-var">$device</span>);
+        <span class="c-fn">runPenTest</span>(<span class="c-var">$device</span>);
+    }
+    <span class="c-kw">return</span> <span class="c-str">'Network SECURED ✓'</span>;
+}</code></pre>
+                </div>
+                <div class="code-card-status"><span class="pulse-dot"></span> Status: <span class="c-ok">All Systems Protected</span></div>
+            </div>
+            <div class="hero-orbit">
+                <span class="orbit-ring r1"></span><span class="orbit-ring r2"></span>
+                <div class="orbit-core"><i class="fa-solid fa-shield-halved"></i></div>
+            </div>
+            <div class="float-chip chip-1"><i class="fa-solid fa-lock"></i> AES-256</div>
+            <div class="float-chip chip-2"><i class="fa-solid fa-network-wired"></i> 99.9% Uptime</div>
+            <div class="float-chip chip-3"><i class="fa-solid fa-bug-slash"></i> Zero Critical</div>
+        </div>
+    </div>
+    <div class="hero-scroll"><a href="#about"><span></span></a></div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats-band" id="statsBand">
+    <div class="container stats-grid">
+        <div class="stat-item" data-aos="zoom-in">
+            <span class="stat-value"><span class="counter" data-target="7">0</span><span class="stat-suffix">+</span></span>
+            <span class="stat-label">سنوات خبرة</span>
+        </div>
+        <div class="stat-item" data-aos="zoom-in">
+            <span class="stat-value"><span class="counter" data-target="120">0</span><span class="stat-suffix">+</span></span>
+            <span class="stat-label">مشروع منفّذ</span>
+        </div>
+        <div class="stat-item" data-aos="zoom-in">
+            <span class="stat-value"><span class="counter" data-target="85">0</span><span class="stat-suffix">+</span></span>
+            <span class="stat-label">عميل سعيد</span>
+        </div>
+        <div class="stat-item" data-aos="zoom-in">
+            <span class="stat-value"><span class="counter" data-target="10">0</span><span class="stat-suffix">+</span></span>
+            <span class="stat-label">شهادة احترافية</span>
+        </div>
+    </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section about" id="about">
+    <div class="container">
+        <div class="section-head" data-aos="fade-down">
+            <span class="section-tag">من أنا</span>
+            <h2 class="section-title">أجمع بين <span class="gradient-text">الهندسة</span> و<span class="gradient-text">الأمن</span> في كل مشروع</h2>
+            <p class="section-sub">تعرّف على مسيرتي المهنية وخبراتي التقنية</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-visual" data-aos="fade-left">
+                <div class="about-frame">
+                    <div class="about-card-main">
+                        <div class="about-avatar"><i class="fa-solid fa-user-shield"></i></div>
+                        <h3>م. محمد الصواف</h3>
+                        <p>مهندس شبكات وأمن معلومات</p>
+                        <a href="#contact" class="btn btn-primary btn-sm">تواصل معي <i class="fa-solid fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                <div class="about-badge-exp">
+                    <span class="exp-num">3+</span>
+                    <span class="exp-label">سنوات<br>خبرة</span>
+                </div>
+            </div>
+            <div class="about-content" data-aos="fade-right">
+                <p class="about-text">أنا م. محمد الصواف، مهندس شبكات وأمن معلومات بخبرة تتجاوز 3 سنوات في تصميم وإدارة البنى التحتية للشبكات، وبناء الحلول البرمجية الآمنة. أعمل على دمج هندسة الشبكات مع تطوير البرمجيات لتقديم حلول متكاملة تبدأ من التخطيط وتنتهي بالحماية.</p>
+                <p class="about-text">أؤمن أن الأمان ليس خطوة إضافية، بل أساس أي نظام. لذلك أركز على بناء أنظمة آمنة بالتصميم (Security by Design)، مع الالتزام بأفضل الممارسات العالمية في التشفير وحماية البيانات.</p>
+                <div class="about-tags">
+                    <span><i class="fa-solid fa-check"></i> عقد صيانة ودعم</span>
+                    <span><i class="fa-solid fa-check"></i> تسليم بالوقت</span>
+                    <span><i class="fa-solid fa-check"></i> تقرير أمني شفاف</span>
+                </div>
+                <h4 class="skills-title">مهاراتي التقنية</h4>
+                <div class="skills">
+                    <div class="skill" data-aos="fade-right">
+                        <div class="skill-head"><span>إدارة وتصميم الشبكات</span><span class="skill-pct" data-level="95">0%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-level="95"></div></div>
+                    </div>
+                    <div class="skill" data-aos="fade-right">
+                        <div class="skill-head"><span>أمن المعلومات ومكافحة الاختراق</span><span class="skill-pct" data-level="90">0%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-level="90"></div></div>
+                    </div>
+                    <div class="skill" data-aos="fade-right">
+                        <div class="skill-head"><span>الجدران النارية و VPN</span><span class="skill-pct" data-level="88">0%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-level="88"></div></div>
+                    </div>
+                    <div class="skill" data-aos="fade-right">
+                        <div class="skill-head"><span>تطوير الويب (PHP / JS)</span><span class="skill-pct" data-level="85">0%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-level="85"></div></div>
+                    </div>
+                    <div class="skill" data-aos="fade-right">
+                        <div class="skill-head"><span>قواعد البيانات (MySQL)</span><span class="skill-pct" data-level="82">0%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-level="82"></div></div>
+                    </div>
+                    <div class="skill" data-aos="fade-right">
+                        <div class="skill-head"><span>أمان تطبيقات الويب</span><span class="skill-pct" data-level="92">0%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-level="92"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ PORTFOLIO ============ -->
+<section class="section portfolio" id="portfolio">
+    <div class="container">
+        <div class="section-head" data-aos="fade-down">
+            <span class="section-tag">معرض الأعمال</span>
+            <h2 class="section-title">مشاريع <span class="gradient-text">نفّذتها</span> باحترافية</h2>
+            <p class="section-sub">استعرض أعمالي في تطوير الويب والشبكات والأمن السيبراني</p>
+        </div>
+        <div class="portfolio-toolbar" data-aos="fade-up">
+            <div class="filter-buttons" id="filterButtons">
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="websites"><i class="fa-solid fa-globe"></i> مواقع ويب</button>
+                <button class="filter-btn" data-filter="mobile-apps"><i class="fa-solid fa-mobile-screen"></i> تطبيقات جوال</button>
+                <button class="filter-btn" data-filter="network-tools"><i class="fa-solid fa-network-wired"></i> أدوات شبكات</button>
+                <button class="filter-btn" data-filter="security-tools"><i class="fa-solid fa-shield-halved"></i> أدوات أمن وسايبر</button>
+            </div>
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="projectSearch" placeholder="ابحث عن مشروع...">
+            </div>
+        </div>
+        <div class="projects-grid" id="projectsGrid">
+
+            <article class="project-card" data-aos="zoom-in"
+                     data-category="websites" data-title="منصة تعليم إلكتروني ذكية"
+                     data-description="منصة تعليمية متكاملة بمسارات تدريبية ذكية، اختبارات تفاعلية، وشهادات إكمال، بنظام إدارة محتوى مرن وواجهة عربية أنيقة."
+                     data-image="../assets/img/projects/e-learning.svg" data-link="https://example.com/e-learning"
+                     data-category-name="مواقع ويب">
+                <div class="project-thumb">
+                    <img src="../assets/img/projects/e-learning.svg" alt="منصة تعليم إلكتروني ذكية" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-cat-badge"><i class="fa-solid fa-globe"></i> مواقع ويب</span>
+                        <div class="project-actions">
+                            <button class="btn-icon project-view" title="عرض التفاصيل"><i class="fa-solid fa-eye"></i></button>
+                            <a href="https://example.com/e-learning" target="_blank" rel="noopener" class="btn-icon" title="زيارة المشروع"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <span class="project-featured"><i class="fa-solid fa-star"></i> مميز</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">منصة تعليم إلكتروني ذكية</h3>
+                    <p class="project-desc">منصة تعليمية متكاملة بمسارات تدريبية ذكية، اختبارات تفاعلية، وشهادات إكمال، بنظام إدارة محتوى مرن وواجهة عربية أنيقة.</p>
+                    <span class="project-tech">مواقع ويب</span>
+                </div>
+            </article>
+
+            <article class="project-card" data-aos="zoom-in"
+                     data-category="network-tools" data-title="سكربت فحص شبكي متقدم (Network Scanner)"
+                     data-description="أداة فحص شبكي متقدمة تكتشف الأجهزة والمنافذ المفتوحة وتُقيّم جاهزية البنية التحتية مع تقارير واضحة بالعربية."
+                     data-image="../assets/img/projects/network-scanner.svg" data-link="https://github.com/example/network-scanner"
+                     data-category-name="أدوات شبكات">
+                <div class="project-thumb">
+                    <img src="../assets/img/projects/network-scanner.svg" alt="سكربت فحص شبكي متقدم" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-cat-badge"><i class="fa-solid fa-network-wired"></i> أدوات شبكات</span>
+                        <div class="project-actions">
+                            <button class="btn-icon project-view" title="عرض التفاصيل"><i class="fa-solid fa-eye"></i></button>
+                            <a href="https://github.com/example/network-scanner" target="_blank" rel="noopener" class="btn-icon" title="زيارة المشروع"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <span class="project-featured"><i class="fa-solid fa-star"></i> مميز</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">سكربت فحص شبكي متقدم (Network Scanner)</h3>
+                    <p class="project-desc">أداة فحص شبكي متقدمة تكتشف الأجهزة والمنافذ المفتوحة وتُقيّم جاهزية البنية التحتية مع تقارير واضحة بالعربية.</p>
+                    <span class="project-tech">أدوات شبكات</span>
+                </div>
+            </article>
+
+            <article class="project-card" data-aos="zoom-in"
+                     data-category="security-tools" data-title="أداة فحص ثغرات الويب"
+                     data-description="أداة فحص ثغرات تطبيقات الويب تكتشف حقن SQL وXSS وتكوينات الخوادم الخاطئة، مع تقرير مخاطر مرتّب بالأولوية."
+                     data-image="../assets/img/projects/security-scanner.svg" data-link="https://github.com/example/security-scanner"
+                     data-category-name="أدوات أمن وسايبر">
+                <div class="project-thumb">
+                    <img src="../assets/img/projects/security-scanner.svg" alt="أداة فحص ثغرات الويب" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-cat-badge"><i class="fa-solid fa-shield-halved"></i> أدوات أمن وسايبر</span>
+                        <div class="project-actions">
+                            <button class="btn-icon project-view" title="عرض التفاصيل"><i class="fa-solid fa-eye"></i></button>
+                            <a href="https://github.com/example/security-scanner" target="_blank" rel="noopener" class="btn-icon" title="زيارة المشروع"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <span class="project-featured"><i class="fa-solid fa-star"></i> مميز</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">أداة فحص ثغرات الويب</h3>
+                    <p class="project-desc">أداة فحص ثغرات تطبيقات الويب تكتشف حقن SQL وXSS وتكوينات الخوادم الخاطئة، مع تقرير مخاطر مرتّب بالأولوية.</p>
+                    <span class="project-tech">أدوات أمن وسايبر</span>
+                </div>
+            </article>
+
+            <article class="project-card" data-aos="zoom-in"
+                     data-category="mobile-apps" data-title="نظام حضور ذكي بالتعرف على الوجه"
+                     data-description="نظام تتبع حضور الموظفين بالتعرف على الوجه مع تقارير يومية وتنبيهات فورية وواجهة استخدام سهلة."
+                     data-image="../assets/img/projects/attendance-app.svg" data-link="https://example.com/attendance"
+                     data-category-name="تطبيقات جوال">
+                <div class="project-thumb">
+                    <img src="../assets/img/projects/attendance-app.svg" alt="نظام حضور ذكي بالتعرف على الوجه" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-cat-badge"><i class="fa-solid fa-mobile-screen"></i> تطبيقات جوال</span>
+                        <div class="project-actions">
+                            <button class="btn-icon project-view" title="عرض التفاصيل"><i class="fa-solid fa-eye"></i></button>
+                            <a href="https://example.com/attendance" target="_blank" rel="noopener" class="btn-icon" title="زيارة المشروع"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">نظام حضور ذكي بالتعرف على الوجه</h3>
+                    <p class="project-desc">نظام تتبع حضور الموظفين بالتعرف على الوجه مع تقارير يومية وتنبيهات فورية وواجهة استخدام سهلة.</p>
+                    <span class="project-tech">تطبيقات جوال</span>
+                </div>
+            </article>
+
+            <article class="project-card" data-aos="zoom-in"
+                     data-category="websites" data-title="متجر إلكتروني متكامل"
+                     data-description="متجر شامل مع سلة مشتريات، بوابات دفع محلية، لوحة تحكم للمنتجات والطلبات، وتحسينات SEO كاملة."
+                     data-image="../assets/img/projects/store.svg" data-link="https://example.com/store"
+                     data-category-name="مواقع ويب">
+                <div class="project-thumb">
+                    <img src="../assets/img/projects/store.svg" alt="متجر إلكتروني متكامل" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-cat-badge"><i class="fa-solid fa-globe"></i> مواقع ويب</span>
+                        <div class="project-actions">
+                            <button class="btn-icon project-view" title="عرض التفاصيل"><i class="fa-solid fa-eye"></i></button>
+                            <a href="https://example.com/store" target="_blank" rel="noopener" class="btn-icon" title="زيارة المشروع"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">متجر إلكتروني متكامل</h3>
+                    <p class="project-desc">متجر شامل مع سلة مشتريات، بوابات دفع محلية، لوحة تحكم للمنتجات والطلبات، وتحسينات SEO كاملة.</p>
+                    <span class="project-tech">مواقع ويب</span>
+                </div>
+            </article>
+
+            <article class="project-card" data-aos="zoom-in"
+                     data-category="network-tools" data-title="لوحة مراقبة الخوادم والبنية التحتية"
+                     data-description="لوحة مراقبة حية للخوادم ترسل تنبيهات عند ارتفاع الحمل أو التوقف، مع رسوم بيانية وتقارير أداء دورية."
+                     data-image="../assets/img/projects/server-monitor.svg" data-link="https://example.com/monitor"
+                     data-category-name="أدوات شبكات">
+                <div class="project-thumb">
+                    <img src="../assets/img/projects/server-monitor.svg" alt="لوحة مراقبة الخوادم والبنية التحتية" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-cat-badge"><i class="fa-solid fa-network-wired"></i> أدوات شبكات</span>
+                        <div class="project-actions">
+                            <button class="btn-icon project-view" title="عرض التفاصيل"><i class="fa-solid fa-eye"></i></button>
+                            <a href="https://example.com/monitor" target="_blank" rel="noopener" class="btn-icon" title="زيارة المشروع"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">لوحة مراقبة الخوادم والبنية التحتية</h3>
+                    <p class="project-desc">لوحة مراقبة حية للخوادم ترسل تنبيهات عند ارتفاع الحمل أو التوقف، مع رسوم بيانية وتقارير أداء دورية.</p>
+                    <span class="project-tech">أدوات شبكات</span>
+                </div>
+            </article>
+
+            <article class="project-card" data-aos="zoom-in"
+                     data-category="mobile-apps" data-title="تطبيق مراسلة مشفّرة من طرف إلى طرف"
+                     data-description="تطبيق مراسلة فورية بتشفير كامل من طرف إلى طرف، رسائل تختفي، وروابط تحقق، بمعايير أمان عالية."
+                     data-image="../assets/img/projects/secure-chat.svg" data-link="https://github.com/example/secure-chat"
+                     data-category-name="تطبيقات جوال">
+                <div class="project-thumb">
+                    <img src="../assets/img/projects/secure-chat.svg" alt="تطبيق مراسلة مشفّرة" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-cat-badge"><i class="fa-solid fa-mobile-screen"></i> تطبيقات جوال</span>
+                        <div class="project-actions">
+                            <button class="btn-icon project-view" title="عرض التفاصيل"><i class="fa-solid fa-eye"></i></button>
+                            <a href="https://github.com/example/secure-chat" target="_blank" rel="noopener" class="btn-icon" title="زيارة المشروع"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">تطبيق مراسلة مشفّرة من طرف إلى طرف</h3>
+                    <p class="project-desc">تطبيق مراسلة فورية بتشفير كامل من طرف إلى طرف، رسائل تختفي، وروابط تحقق، بمعايير أمان عالية.</p>
+                    <span class="project-tech">تطبيقات جوال</span>
+                </div>
+            </article>
+
+            <article class="project-card" data-aos="zoom-in"
+                     data-category="websites" data-title="نظام إدارة مخزون للمستودعات"
+                     data-description="نظام إدارة مخزون يعرض الكميات والموردين، باركود، وتنبيهات نفاد، مع تقارير مبيعات ومشتريات دقيقة."
+                     data-image="../assets/img/projects/inventory.svg" data-link="https://example.com/inventory"
+                     data-category-name="مواقع ويب">
+                <div class="project-thumb">
+                    <img src="../assets/img/projects/inventory.svg" alt="نظام إدارة مخزون للمستودعات" loading="lazy">
+                    <div class="project-overlay">
+                        <span class="project-cat-badge"><i class="fa-solid fa-globe"></i> مواقع ويب</span>
+                        <div class="project-actions">
+                            <button class="btn-icon project-view" title="عرض التفاصيل"><i class="fa-solid fa-eye"></i></button>
+                            <a href="https://example.com/inventory" target="_blank" rel="noopener" class="btn-icon" title="زيارة المشروع"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">نظام إدارة مخزون للمستودعات</h3>
+                    <p class="project-desc">نظام إدارة مخزون يعرض الكميات والموردين، باركود، وتنبيهات نفاد، مع تقارير مبيعات ومشتريات دقيقة.</p>
+                    <span class="project-tech">مواقع ويب</span>
+                </div>
+            </article>
+
+        </div>
+        <p class="empty-state" id="projectsEmpty" hidden><i class="fa-solid fa-folder-open"></i> لا توجد نتائج مطابقة للبحث</p>
+    </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section services" id="services">
+    <div class="container">
+        <div class="section-head" data-aos="fade-down">
+            <span class="section-tag">الخدمات والمنتجات</span>
+            <h2 class="section-title">حلول و<span class="gradient-text">خدمات رقمية</span> عند الطلب</h2>
+            <p class="section-sub">اختر الخدمة المناسبة واحصل على عرض سعر خلال 24 ساعة</p>
+        </div>
+        <div class="services-grid">
+
+            <article class="service-card service-featured" data-aos="fade-up">
+                <span class="service-popular">الأكثر طلباً</span>
+                <div class="service-icon"><i class="fa-solid fa-network-wired"></i></div>
+                <span class="service-badge badge-available">متوفر</span>
+                <h3 class="service-title">تهيئة شبكات الشركات (VPN / Firewall)</h3>
+                <p class="service-desc">تصميم وتهيئة الشبكات الداخلية، جدران الحماية، شبكات VPN الآمنة، وفصل الشبكات حسب الأقسام.</p>
+                <div class="service-price">
+                    <span class="price-num">$800</span>
+                    <span class="price-note">تبدأ من</span>
+                </div>
+                <a href="#contact" class="btn btn-outline btn-block order-btn" data-service="تهيئة شبكات الشركات (VPN / Firewall)"><i class="fa-solid fa-cart-plus"></i> اطلب الخدمة</a>
+            </article>
+
+            <article class="service-card service-featured" data-aos="fade-up">
+                <span class="service-popular">الأكثر طلباً</span>
+                <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <span class="service-badge badge-available">متوفر</span>
+                <h3 class="service-title">اختبار اختراق وتقييم الثغرات</h3>
+                <p class="service-desc">فحص شامل لأنظمتك وتطبيقاتك لاكتشاف الثغرات قبل اختراقها، مع تقرير تفصيلي ومراحل إصلاح موثقة.</p>
+                <div class="service-price">
+                    <span class="price-num">$1200</span>
+                    <span class="price-note">تبدأ من</span>
+                </div>
+                <a href="#contact" class="btn btn-outline btn-block order-btn" data-service="اختبار اختراق وتقييم الثغرات"><i class="fa-solid fa-cart-plus"></i> اطلب الخدمة</a>
+            </article>
+
+            <article class="service-card" data-aos="fade-up">
+                <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+                <span class="service-badge badge-available">متوفر</span>
+                <h3 class="service-title">تصميم مواقع ومدونات احترافية</h3>
+                <p class="service-desc">تصميم وتطوير مواقع متجاوبة وسريعة ومتوافقة مع محركات البحث، بهوية بصرية مميزة.</p>
+                <div class="service-price">
+                    <span class="price-num">$150</span>
+                    <span class="price-note">تبدأ من</span>
+                </div>
+                <a href="#contact" class="btn btn-outline btn-block order-btn" data-service="تصميم مواقع ومدونات احترافية"><i class="fa-solid fa-cart-plus"></i> اطلب الخدمة</a>
+            </article>
+
+            <article class="service-card" data-aos="fade-up">
+                <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                <span class="service-badge badge-limited">كمية محدودة</span>
+                <h3 class="service-title">متجر إلكتروني متكامل</h3>
+                <p class="service-desc">متجر شامل مع بوابات دفع، إدارة مخزون، وأنظمة شحن وتوصيل.</p>
+                <div class="service-price">
+                    <span class="price-num">$500</span>
+                    <span class="price-note">تبدأ من</span>
+                </div>
+                <a href="#contact" class="btn btn-outline btn-block order-btn" data-service="متجر إلكتروني متكامل"><i class="fa-solid fa-cart-plus"></i> اطلب الخدمة</a>
+            </article>
+
+            <article class="service-card" data-aos="fade-up">
+                <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                <span class="service-badge badge-limited">كمية محدودة</span>
+                <h3 class="service-title">فحص أمني وتدقيق أنظمة</h3>
+                <p class="service-desc">مراجعة أمنية كاملة للبنية التحتية وأنظمة التشغيل والتطبيقات وفق أفضل المعايير العالمية.</p>
+                <div class="service-price">
+                    <span class="price-num price-request">عند الطلب</span>
+                </div>
+                <a href="#contact" class="btn btn-outline btn-block order-btn" data-service="فحص أمني وتدقيق أنظمة"><i class="fa-solid fa-cart-plus"></i> اطلب الخدمة</a>
+            </article>
+
+            <article class="service-card" data-aos="fade-up">
+                <div class="service-icon"><i class="fa-solid fa-server"></i></div>
+                <span class="service-badge badge-available">متوفر</span>
+                <h3 class="service-title">صيانة وحماية الخوادم</h3>
+                <p class="service-desc">مراقبة دورية، تحديثات أمنية مستمرة، نسخ احتياطي تلقائي، واستعادة فورية عند الأعطال.</p>
+                <div class="service-price">
+                    <span class="price-num">$250</span>
+                    <span class="price-note">شهرياً</span>
+                </div>
+                <a href="#contact" class="btn btn-outline btn-block order-btn" data-service="صيانة وحماية الخوادم"><i class="fa-solid fa-cart-plus"></i> اطلب الخدمة</a>
+            </article>
+
+            <article class="service-card" data-aos="fade-up">
+                <div class="service-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                <span class="service-badge badge-unavailable">غير متاح</span>
+                <h3 class="service-title">تطبيقات جوال مخصصة</h3>
+                <p class="service-desc">تطوير تطبيقات موبايل لأنظمة iOS وAndroid بأداء عالٍ وتجربة مستخدم مميزة.</p>
+                <div class="service-price">
+                    <span class="price-num">$700</span>
+                    <span class="price-note">تبدأ من</span>
+                </div>
+                <a href="#contact" class="btn btn-outline btn-block order-btn" data-service="تطبيقات جوال مخصصة"><i class="fa-solid fa-cart-plus"></i> اطلب الخدمة</a>
+            </article>
+
+            <article class="service-card" data-aos="fade-up">
+                <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+                <span class="service-badge badge-available">متوفر</span>
+                <h3 class="service-title">استشارات ودعم فني</h3>
+                <p class="service-desc">جلسات استشارية عن بعد في مجال الشبكات والأمن السيبراني وحلول البرمجيات.</p>
+                <div class="service-price">
+                    <span class="price-num">$100</span>
+                    <span class="price-note">بالساعة</span>
+                </div>
+                <a href="#contact" class="btn btn-outline btn-block order-btn" data-service="استشارات ودعم فني"><i class="fa-solid fa-cart-plus"></i> اطلب الخدمة</a>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section testimonials" id="testimonials">
+    <div class="container">
+        <div class="section-head" data-aos="fade-down">
+            <span class="section-tag">آراء العملاء</span>
+            <h2 class="section-title">ماذا يقول <span class="gradient-text">عملائي</span> عني؟</h2>
+        </div>
+        <div class="testimonials-grid">
+            <figure class="testimonial-card" data-aos="zoom-in">
+                <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <blockquote>"تعامل محترف وأمانة عالية في العمل. سكّب شبكتنا بالكامل مع جدار حماية متقدم بدون أي توقف للعمل."</blockquote>
+                <figcaption>
+                    <span class="testimonial-avatar"><i class="fa-solid fa-user-tie"></i></span>
+                    <div><strong>محمد العتيبي</strong><small>مدير تقنية المعلومات — شركة أفق</small></div>
+                </figcaption>
+            </figure>
+            <figure class="testimonial-card" data-aos="zoom-in">
+                <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <blockquote>"بنى لي المتجر من الصفر بسرعة وجودة عالية، والدعم الفني مستمر. أنصح فيه بشدة لأي مشروع تقني."</blockquote>
+                <figcaption>
+                    <span class="testimonial-avatar"><i class="fa-solid fa-businesswoman"></i></span>
+                    <div><strong>نورة القحطاني</strong><small>مؤسسة متجر إلكتروني</small></div>
+                </figcaption>
+            </figure>
+            <figure class="testimonial-card" data-aos="zoom-in">
+                <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <blockquote>"فحص أمني دقيق كشف ثغرات لم نكن نتوقعها، مع تقرير واضح وخطوات إصلاح عملية. خبرة حقيقية بالأمن."</blockquote>
+                <figcaption>
+                    <span class="testimonial-avatar"><i class="fa-solid fa-user-astronaut"></i></span>
+                    <div><strong>خالد الرشيد</strong><small>مطور برمجيات</small></div>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section contact" id="contact">
+    <div class="container">
+        <div class="section-head" data-aos="fade-down">
+            <span class="section-tag">تواصل معي</span>
+            <h2 class="section-title">لنبدأ <span class="gradient-text">مشروعك</span> اليوم</h2>
+            <p class="section-sub">أرسل لي رسالتك وسأرد خلال 24 ساعة</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info" data-aos="fade-left">
+                <div class="info-card">
+                    <span class="info-icon"><i class="fa-solid fa-envelope"></i></span>
+                    <div><h4>البريد الإلكتروني</h4><p dir="ltr">swaf8315@gmail.com</p></div>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon"><i class="fa-solid fa-phone"></i></span>
+                    <div><h4>الهاتف / واتساب</h4><p dir="ltr">+967 771792570</p></div>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <div><h4>الموقع</h4><p>الرياض، المملكة العربية السعودية</p></div>
+                </div>
+                <a href="https://wa.me/967771792570" target="_blank" rel="noopener" class="btn btn-whatsapp btn-block">
+                    <i class="fa-brands fa-whatsapp"></i> تواصل واتساب مباشرة
+                </a>
+            </div>
+            <form class="contact-form" id="contactForm" data-aos="fade-right" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cName">الاسم *</label>
+                        <input type="text" id="cName" name="name" class="form-control" placeholder="اسمك الكامل" required>
+                        <span class="field-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cEmail">البريد الإلكتروني *</label>
+                        <input type="email" id="cEmail" name="email" class="form-control" placeholder="name@example.com" required dir="ltr">
+                        <span class="field-error"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="cSubject">الموضوع *</label>
+                    <input type="text" id="cSubject" name="subject" class="form-control" placeholder="موضوع الرسالة" required>
+                    <span class="field-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="cMessage">الرسالة *</label>
+                    <textarea id="cMessage" name="message" class="form-control" rows="6" placeholder="اكتب تفاصيل مشروعك أو استفسارك هنا..." required></textarea>
+                    <span class="field-error"></span>
+                </div>
+                <div class="form-terms">
+                    <i class="fa-solid fa-lock"></i> رسالتك مشفرة وسيتم الرد عليها عبر البريد الإلكتروني بأمان.
+                </div>
+                <button type="submit" class="btn btn-primary btn-block submit-btn" id="contactSubmit">
+                    <span class="btn-label"><i class="fa-solid fa-paper-plane"></i> إرسال الرسالة</span>
+                    <span class="btn-loading" hidden><i class="fa-solid fa-spinner fa-spin"></i> جار الإرسال...</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer-grid">
+        <div class="footer-col">
+            <div class="brand footer-brand">
+                <span class="brand-mark"><i class="fa-solid fa-shield-halved"></i></span>
+                <span class="brand-text">م. محمد الصواف</span>
+            </div>
+            <p class="footer-desc">مهندس شبكات وأمن معلومات — أقدم حلولاً تقنية متكاملة تجمع بين هندسة الشبكات وأمن المعلومات وتطوير البرمجيات.</p>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-title">روابط سريعة</h4>
+            <ul class="footer-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">من أنا</a></li>
+                <li><a href="#portfolio">أعمالي</a></li>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#contact">تواصل معي</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-title">معلومات التواصل</h4>
+            <ul class="footer-contact">
+                <li><i class="fa-solid fa-envelope"></i><span dir="ltr">swaf8315@gmail.com</span></li>
+                <li><i class="fa-solid fa-phone"></i><span dir="ltr">+967 771792570</span></li>
+                <li><i class="fa-solid fa-location-dot"></i><span>الرياض، المملكة العربية السعودية</span></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-title">تابعني</h4>
+            <div class="footer-social">
+                <a href="https://github.com/khaledsalmi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/khaledsalmi" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                
+                <a href="https://wa.me/967771792570" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p>م. محمد الصواف © 2026 — جميع الحقوق محفوظة.</p>
+            <p class="footer-dev">صُنع بـ <i class="fa-solid fa-heart"></i> بواسطة <a href="#home">م. محمد الصواف</a></p>
+        </div>
+    </div>
+</footer>
+
+<div class="toast-container" id="toastContainer"></div>
+
+<a href="#home" class="back-to-top" id="backToTop" aria-label="العودة للأعلى"><i class="fa-solid fa-angles-up"></i></a>
+
+<div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-box">
+        <button class="modal-close" data-close aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-body" id="projectModalBody"></div>
+    </div>
+</div>
+
+<script>
+/* معاينة فقط: النموذج لا يوجد خلفه سيرفر — نعرض نجاحاً وهمياً */
+(function () {
+  var f = document.getElementById('contactForm');
+  if (!f) return;
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    if (window.showToast) window.showToast('نسخة المعاينة: لا يوجد سيرفر لإرسال الرسالة. جربها على النسخة الكاملة.', 'success');
+  });
+})();
+</script>
+<script>
+(function () {
+  'use strict';
+
+  var revealAll = function () {
+    var els = document.querySelectorAll('[data-aos]');
+    for (var i = 0; i < els.length; i++) { els[i].classList.add('aos-animate'); }
+  };
+  var hasIO = ('IntersectionObserver' in window);
+  var supportsFetch = ('fetch' in window);
+
+  /* ---------- Preloader ---------- */
+  var preloader = document.getElementById('preloader');
+  var hidePreloader = function () {
+    if (preloader) preloader.classList.add('hidden');
+  };
+  window.addEventListener('load', hidePreloader);
+  setTimeout(hidePreloader, 2200);
+
+  /* ---------- Toast ---------- */
+  var toastBox = document.getElementById('toastContainer');
+  function toast(msg, type) {
+    type = type || 'success';
+    if (!toastBox) return;
+    var el = document.createElement('div');
+    el.className = 'toast toast-' + type;
+    var icon = type === 'success' ? 'fa-circle-check' : 'fa-circle-exclamation';
+    el.innerHTML = '<i class="fa-solid ' + icon + '"></i><span>' + msg + '</span>';
+    toastBox.appendChild(el);
+    setTimeout(function () { el.style.opacity = '0'; el.style.transition = 'opacity .3s'; setTimeout(function () { el.remove(); }, 320); }, 4000);
+  }
+  window.showToast = toast;
+
+  /* ---------- Navbar ---------- */
+  var navbar = document.getElementById('navbar');
+  var backToTop = document.getElementById('backToTop');
+  var navToggle = document.getElementById('navToggle');
+  var navMenu = document.getElementById('navMenu');
+  var navLinks = document.querySelectorAll('.nav-link');
+
+  function onScroll() {
+    var y = window.scrollY || 0;
+    if (navbar) navbar.classList.toggle('scrolled', y > 30);
+    if (backToTop) backToTop.classList.toggle('show', y > 600);
+  }
+
+  function scrollSpy() {
+    var sections = ['home', 'about', 'portfolio', 'services', 'contact'];
+    var current = 'home';
+    for (var i = 0; i < sections.length; i++) {
+      var el = document.getElementById(sections[i]);
+      if (el && el.getBoundingClientRect().top <= 120) current = sections[i];
+    }
+    for (var j = 0; j < navLinks.length; j++) {
+      navLinks[j].classList.toggle('active', navLinks[j].getAttribute('data-id') === current);
+    }
+  }
+
+  window.addEventListener('scroll', function () { onScroll(); scrollSpy(); }, { passive: true });
+  onScroll();
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', function () {
+      navMenu.classList.toggle('open');
+      var icon = navToggle.querySelector('i');
+      icon.className = navMenu.classList.contains('open') ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+    });
+    for (var k = 0; k < navLinks.length; k++) {
+      navLinks[k].addEventListener('click', function () {
+        navMenu.classList.remove('open');
+        var icon = navToggle.querySelector('i');
+        icon.className = 'fa-solid fa-bars';
+      });
+    }
+  }
+
+  /* ---------- Typing effect ---------- */
+  var typer = document.getElementById('typer');
+  if (typer) {
+    var words = [];
+    try { words = JSON.parse(typer.getAttribute('data-words') || '[]'); } catch (e) { words = []; }
+    if (words.length) {
+      var wi = 0, ci = 0, deleting = false;
+      (function type() {
+        var word = words[wi] || '';
+        typer.textContent = word.substring(0, ci);
+        var delay = deleting ? 50 : 110;
+        if (!deleting && ci === word.length) { delay = 1600; deleting = true; }
+        else if (deleting && ci === 0) { deleting = false; wi = (wi + 1) % words.length; delay = 400; }
+        ci += deleting ? -1 : 1;
+        setTimeout(type, delay);
+      })();
+    }
+  }
+
+  /* ---------- Reveal on scroll (safe for old browsers) ---------- */
+  try {
+    if (hasIO) {
+      var revealObs = new IntersectionObserver(function (entries) {
+        for (var i = 0; i < entries.length; i++) {
+          if (entries[i].isIntersecting) {
+            entries[i].target.classList.add('aos-animate');
+            revealObs.unobserve(entries[i].target);
+          }
+        }
+      }, { threshold: 0.12 });
+      var aosEls = document.querySelectorAll('[data-aos]');
+      for (var a = 0; a < aosEls.length; a++) { revealObs.observe(aosEls[a]); }
+    } else {
+      revealAll();
+    }
+  } catch (e) {
+    revealAll();
+  }
+
+  /* ---------- Counters ---------- */
+  var counters = document.querySelectorAll('.counter');
+  if (hasIO) {
+    try {
+      var counterObs = new IntersectionObserver(function (entries) {
+        for (var i = 0; i < entries.length; i++) {
+          if (!entries[i].isIntersecting) continue;
+          var el = entries[i].target;
+          var target = parseInt(el.getAttribute('data-target') || '0', 10);
+          var dur = 1400;
+          var start = performance.now();
+          (function tick(now) {
+            var p = Math.min((now - start) / dur, 1);
+            var eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.floor(eased * target);
+            if (p < 1) requestAnimationFrame(tick);
+          })(start);
+          counterObs.unobserve(el);
+        }
+      }, { threshold: 0.5 });
+      for (var c = 0; c < counters.length; c++) { counterObs.observe(counters[c]); }
+    } catch (e) {
+      for (var c2 = 0; c2 < counters.length; c2++) {
+        counters[c2].textContent = counters[c2].getAttribute('data-target') || '0';
+      }
+    }
+  } else {
+    for (var c3 = 0; c3 < counters.length; c3++) { counters[c3].textContent = counters[c3].getAttribute('data-target') || '0'; }
+  }
+
+  /* ---------- Skill bars ---------- */
+  var skillEls = document.querySelectorAll('.skill');
+  function fillSkill(skill) {
+    var fill = skill.querySelector('.skill-fill');
+    var pct = skill.querySelector('.skill-pct');
+    var level = fill ? parseInt(fill.getAttribute('data-level') || '0', 10) : 0;
+    if (pct) pct.textContent = level + '%';
+    if (fill) fill.style.width = level + '%';
+  }
+  if (hasIO) {
+    try {
+      var skillObs = new IntersectionObserver(function (entries) {
+        for (var i = 0; i < entries.length; i++) {
+          if (!entries[i].isIntersecting) continue;
+          fillSkill(entries[i].target);
+          skillObs.unobserve(entries[i].target);
+        }
+      }, { threshold: 0.4 });
+      for (var s = 0; s < skillEls.length; s++) { skillObs.observe(skillEls[s]); }
+    } catch (e) {
+      for (var s2 = 0; s2 < skillEls.length; s2++) { fillSkill(skillEls[s2]); }
+    }
+  } else {
+    for (var s3 = 0; s3 < skillEls.length; s3++) { fillSkill(skillEls[s3]); }
+  }
+
+  /* ---------- Portfolio filter + search ---------- */
+  var filterBtns = document.querySelectorAll('.filter-btn');
+  var searchInput = document.getElementById('projectSearch');
+  var cards = document.querySelectorAll('.project-card');
+  var emptyState = document.getElementById('projectsEmpty');
+  var currentFilter = 'all';
+
+  function applyFilter() {
+    var q = ((searchInput && searchInput.value) || '').trim().toLowerCase();
+    var visible = 0;
+    for (var i = 0; i < cards.length; i++) {
+      var cat = cards[i].getAttribute('data-category') || '';
+      var title = (cards[i].getAttribute('data-title') || '').toLowerCase();
+      var matchCat = currentFilter === 'all' || cat === currentFilter;
+      var matchQ = q === '' || title.indexOf(q) !== -1;
+      var show = matchCat && matchQ;
+      cards[i].classList.toggle('hiding', !show);
+      if (show) visible++;
+    }
+    if (emptyState) emptyState.hidden = visible > 0;
+  }
+
+  for (var b = 0; b < filterBtns.length; b++) {
+    filterBtns[b].addEventListener('click', function () {
+      for (var i = 0; i < filterBtns.length; i++) { filterBtns[i].classList.remove('active'); }
+      this.classList.add('active');
+      currentFilter = this.getAttribute('data-filter');
+      applyFilter();
+    });
+  }
+  if (searchInput) searchInput.addEventListener('input', applyFilter);
+
+  /* ---------- Project modal ---------- */
+  var modal = document.getElementById('projectModal');
+  var modalBody = document.getElementById('projectModalBody');
+
+  function openModal(card) {
+    if (!modal || !modalBody) return;
+    var img = card.getAttribute('data-image');
+    var hasImg = img && img.trim() !== '';
+    modalBody.innerHTML =
+      '<div class="modal-hero">' +
+      (hasImg ? '<img src="' + img + '" alt="' + card.getAttribute('data-title') + '">' : '<div class="modal-noimg"><i class="fa-solid fa-diagram-project"></i></div>') +
+      '</div>' +
+      '<div class="modal-content">' +
+      '<span class="modal-cat"><i class="fa-solid fa-folder"></i> ' + card.getAttribute('data-category-name') + '</span>' +
+      '<h3 class="modal-title">' + card.getAttribute('data-title') + '</h3>' +
+      '<p>' + card.getAttribute('data-description') + '</p>' +
+      (card.getAttribute('data-link')
+        ? '<div class="modal-actions"><a class="btn btn-primary" target="_blank" rel="noopener" href="' + card.getAttribute('data-link') + '"><i class="fa-solid fa-up-right-from-square"></i> زيارة المشروع</a></div>'
+        : '') +
+      '</div>';
+    modal.classList.add('open');
+    document.body.classList.add('no-scroll');
+  }
+
+  function closeModal() {
+    if (!modal) return;
+    modal.classList.remove('open');
+    document.body.classList.remove('no-scroll');
+  }
+
+  document.addEventListener('click', function (e) {
+    if (e.target.closest && e.target.closest('[data-close]')) closeModal();
+  });
+  document.addEventListener('click', function (e) {
+    var viewBtn = e.target.closest ? e.target.closest('.project-view') : null;
+    if (!viewBtn) return;
+    var card = viewBtn.closest('.project-card');
+    if (!card) return;
+    if (card.getAttribute('data-locked') === '1') {
+      window.location.href = 'login.php';
+      return;
+    }
+    openModal(card);
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+
+  /* ---------- Order button prefill ---------- */
+  document.addEventListener('click', function (e) {
+    var orderBtn = e.target.closest ? e.target.closest('.order-btn') : null;
+    if (!orderBtn) return;
+    var service = orderBtn.getAttribute('data-service');
+    var subject = document.getElementById('cSubject');
+    if (subject && service) subject.value = 'طلب خدمة: ' + service;
+  });
+
+  /* ---------- Contact form ---------- */
+  var cForm = document.getElementById('contactForm');
+  if (cForm) {
+    var submitBtn = document.getElementById('contactSubmit');
+    var labels = {
+      name: 'يرجى إدخال الاسم بشكل صحيح (حرفين على الأقل).',
+      email: 'يرجى إدخال بريد إلكتروني صحيح.',
+      subject: 'يرجى إدخال موضوع الرسالة (3 أحرف على الأقل).',
+      message: 'الرسالة يجب أن تكون 10 أحرف على الأقل.',
+    };
+
+    function setError(field, msg) {
+      var input = document.getElementById(field);
+      if (!input) return;
+      var err = input.parentElement.querySelector('.field-error');
+      input.classList.toggle('input-error', !!msg);
+      if (err) err.textContent = msg || '';
+    }
+
+    function validate() {
+      var values = {
+        name: cForm.elements.name.value.trim(),
+        email: cForm.elements.email.value.trim(),
+        subject: cForm.elements.subject.value.trim(),
+        message: cForm.elements.message.value.trim(),
+      };
+      var ok = true;
+      var rules = {
+        name: function (v) { return v.length >= 2; },
+        email: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); },
+        subject: function (v) { return v.length >= 3; },
+        message: function (v) { return v.length >= 10; },
+      };
+      var keys = ['name', 'email', 'subject', 'message'];
+      for (var i = 0; i < keys.length; i++) {
+        var good = rules[keys[i]](values[keys[i]]);
+        setError(keys[i], good ? '' : labels[keys[i]]);
+        if (!good) ok = false;
+      }
+      return ok ? values : null;
+    }
+
+    cForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var values = validate();
+      if (!values) return;
+
+      var render = function (loading) {
+        var label = submitBtn.querySelector('.btn-label');
+        var spinner = submitBtn.querySelector('.btn-loading');
+        if (!submitBtn) return;
+        if (loading) {
+          if (label) label.hidden = true;
+          if (spinner) spinner.hidden = false;
+          submitBtn.disabled = true;
+        } else {
+          if (label) label.hidden = false;
+          if (spinner) spinner.hidden = true;
+          submitBtn.disabled = false;
+        }
+      };
+
+      if (!supportsFetch) {
+        toast('متصفحك قديم ليدعم الإرسال التلقائي — أرسل الرسالة عبر واتساب.', 'error');
+        return;
+      }
+
+      render(true);
+      fetch('contact.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(values),
+      }).then(function (res) { return res.json(); }).then(function (data) {
+        render(false);
+        if (data.success) {
+          toast(data.message, 'success');
+          cForm.reset();
+        } else if (data.errors) {
+          var keys = Object.keys(data.errors);
+          for (var i = 0; i < keys.length; i++) { setError(keys[i], data.errors[keys[i]]); }
+          toast('يرجى تصحيح الأخطاء في النموذج.', 'error');
+        } else {
+          toast(data.message || 'حدث خطأ، حاول مرة أخرى.', 'error');
+        }
+      }).catch(function () {
+        render(false);
+        toast('تعذر الاتصال بالخادم، تحقق من اتصالك.', 'error');
+      });
+    });
+  }
+
+})();
+</script>
+</body>
+</html>

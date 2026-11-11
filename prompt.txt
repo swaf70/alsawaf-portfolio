@@ -1,0 +1,63 @@
+# PROMPT FOR STITCH — Personal Portfolio & Digital Services Showcase Platform
+
+Build a complete modern, professional, and responsive **frontend** for a personal portfolio + digital services storefront website. This is the PUBLIC SIDE ONLY — do not build any admin dashboard.
+
+## PROJECT IDENTITY
+- A personal brand site for a **Network Engineering & Information Security Specialist**.
+- Tone: professional, technical, trustworthy, modern. Arabic (RTL) primary, bilingual-friendly structure.
+
+## STRUCTURE & SECTIONS
+
+### 1. Layout
+- Fixed/sticky top navbar with smooth-scrolling anchor links.
+- Mobile-friendly hamburger menu.
+- Footer with quick links, social icons (GitHub, LinkedIn, WhatsApp, Email), and copyright.
+
+### 2. Hero Section (Home)
+- Large headline with name + specialty ("Network Engineering & Information Security").
+- Short professional tagline.
+- CTA buttons: "View My Work" and "Contact Me".
+- Optional: animated background (gradient/particles/code motifs) — tasteful and performant.
+- Quick highlight badges/stats (years experience, projects done, clients) if desired.
+
+### 3. About Section
+- Professional biography paragraphs.
+- Skills display (grouped: Networking, Security, Web Development, Programming).
+- Progress bars or icon chips for skill levels.
+
+### 4. Portfolio / Projects Section
+- Filterable gallery of project cards (grid layout).
+- Each card: image, project name, category badge, short description, hover overlay with "View Project" link.
+- Category filter buttons (All, Websites, Mobile Apps, Network Tools, Security Tools).
+- Working search box to filter projects by name.
+
+### 5. Services / Storefront Section
+- Grid of service cards: icon, title, price, feature list, "Order / Get Quote" button.
+- Each service card shows availability (In Stock / Available / Out of Stock states).
+
+### 6. Contact Section
+- Contact form (name, email, subject, message) with client-side validation.
+- Contact info cards: email, phone, location, and social links.
+- WhatsApp direct-link button.
+
+## DESIGN REQUIREMENTS
+- Modern aesthetic: clean, dark-theme or dark/light hybrid, premium feel.
+- Accent color: choose a strong technical color (e.g., cyan/teal/green).
+- Typography: use a good Arabic font (e.g., "Cairo", "Tajawal", or "IBM Plex Sans Arabic" from Google Fonts).
+- Full RTL support with LTR-compatible structure where needed.
+- Smooth scroll, hover animations, fade-in on scroll (subtle, performance-friendly).
+- Fully responsive: desktop, tablet, mobile.
+
+## TECHNICAL NOTES
+- Pure HTML5 + CSS3 + JavaScript only (no frameworks, no build tools).
+- Single-page application feel via sections + anchor navigation (or multi-section single index.html).
+- Use semantic HTML5 tags (header, nav, main, section, article, footer).
+- SVGs or a lightweight icon library (e.g., Font Awesome / Bootstrap Icons via CDN) for icons.
+- Form validation in vanilla JS (no backend needed — frontend only).
+- No placeholder lorem ipsum: use realistic sample data reflecting network/security/programming services and projects.
+- Structure files cleanly: assets/css/, assets/js/, assets/img/, index.html.
+
+## DELIVERABLES EXPECTED
+- A single polished index.html (or index.html + separated assets), ready to be served by a PHP backend later.
+- Every interactive element wired up with vanilla JavaScript.
+- Design must look like a real professional portfolio, not a template.
